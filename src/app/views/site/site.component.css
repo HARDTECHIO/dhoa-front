@@ -1,3 +1,36 @@
-.tam-foto-equipe {
+.equipe-foto {
     width: 300px;
+}
+
+.equipe-nome {
+    font-size: 30px;
+    font-weight: 500px;
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+.equipe-cargo {
+    font-size: 20px;
+    font-weight: 500px;
+    text-align: center;
+    margin-top: -10px;
+}
+
+.equipe-hobbie {
+    font-size: 16px;
+    font-weight: 500px;
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+.equipe-social a {
+    text-decoration: none;
+    font-size: 30px;
+    color: #212121;
+    padding: 0 5px;
+}
+
+#mensagem {
+    resize: none;
+    padding: 11px;
 }
