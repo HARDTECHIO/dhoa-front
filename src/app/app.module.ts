@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MenuComponent } from './template/menu/menu.component';
 import { RodapeComponent } from './template/rodape/rodape.component';
+import { SiteComponent } from './views/site/site.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
-    RodapeComponent
+    RodapeComponent,
+    SiteComponent
   ],
   imports: [
     BrowserModule,
