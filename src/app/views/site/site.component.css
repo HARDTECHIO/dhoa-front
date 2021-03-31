@@ -1,75 +1,69 @@
 .equipe-foto {
-    width: 300px;
+  width: 300px;
 }
 
 .equipe-nome {
-    font-size: 30px;
-    font-weight: 500px;
-    text-align: center;
-    margin-bottom: 0px;
+  font-size: 30px;
+  font-weight: 500px;
+  text-align: center;
+  margin-bottom: 0px;
 }
 
 .equipe-cargo {
-    font-size: 20px;
-    font-weight: 500px;
-    text-align: center;
-    margin-top: -10px;
+  font-size: 20px;
+  font-weight: 500px;
+  text-align: center;
+  margin-top: -10px;
 }
 
 .equipe-hobbie {
-    font-size: 16px;
-    font-weight: 500px;
-    text-align: center;
-    margin-bottom: 0px;
+  font-size: 16px;
+  font-weight: 500px;
+  text-align: center;
+  margin-bottom: 0px;
 }
 
 .equipe-social a {
-    text-decoration: none;
-    font-size: 30px;
-    color: #212121;
-    padding: 0 5px;
+  text-decoration: none;
+  font-size: 30px;
+  color: #212121;
+  padding: 0 5px;
 }
 
 #mensagem {
-    resize: none;
-    padding: 11px;
+  resize: none;
+  padding: 11px;
 }
 
 .titulo {
-    font-size:60px;
-    color: #272b44;
-
+  font-size: 60px;
+  color: #272b44;
 }
 
 .subtitulo {
-    font-size:30px;
-    color: #272b44;
-
+  font-size: 30px;
+  color: #272b44;
 }
 
 .texto {
- color: #706c87;
-
+  color: #706c87;
 }
 
 .bg-verde {
-    background-color: #e5f7f2;
+  background-color: #e5f7f2;
 }
 
 .equipe-hobbie p {
-    font-style: italic;
-    color: #069a92;
-
+  font-style: italic;
+  color: #069a92;
 }
 
 .equipe-hobbie ul li {
-    list-style: none;
-    padding: 0 10px;
-    font-size: 35px;
-
+  list-style: none;
+  padding: 0 10px;
+  font-size: 35px;
 }
 
-.equipe-hobbie ul  {
-    margin-top: -25px;
-
+.equipe-hobbie ul {
+  margin-top: -25px;
 }
