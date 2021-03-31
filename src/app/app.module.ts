@@ -11,6 +11,7 @@ import { CadastrarComponent } from './views/cadastrar/cadastrar.component';
 import { MenuPrincipalComponent } from './template/menu-principal/menu-principal.component';
 import { InicioComponent } from './views/principal/inicio/inicio.component';
 import { PerfilComponent } from './views/principal/perfil/perfil.component';
+import { MinhasPostagensComponent } from './views/principal/minhas-postagens/minhas-postagens.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { PerfilComponent } from './views/principal/perfil/perfil.component';
     CadastrarComponent,
     MenuPrincipalComponent,
     InicioComponent,
-    PerfilComponent
+    PerfilComponent,
+    MinhasPostagensComponent
   ],
   imports: [
     BrowserModule,

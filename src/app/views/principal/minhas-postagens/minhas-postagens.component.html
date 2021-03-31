@@ -1,0 +1,130 @@
+<app-menu-principal></app-menu-principal>
+<div class="container">
+    <div class="row my-3">
+        <div class="col-md">
+            <h1 class="text-center">Editar sua postagens</h1>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-md-3 mr-3"> <!-- filtros -->
+            <div class="row">
+                <div class="col-md bg-secondary p-4">
+                    <div class="row">
+                        <div class="col-md">
+                            <h5>Filtros</h5>
+                        </div>
+                    </div>
+                    <div class="row mb-3"><!-- tipo postagem -->
+                        <div class="col-md">
+                            <p class="m-0">Tipo de Publicação</p>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                <label class="form-check-label" for="defaultCheck1">
+                                  Oferecendo Ajuda
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                <label class="form-check-label" for="defaultCheck1">
+                                  Pedindo Ajuda
+                                </label>
+                            </div>
+                        </div>
+                    </div><!-- /tipo postagem -->
+        
+                    <div class="row"><!-- temas/categorias -->
+                        <div class="col-md">
+                            <p class="m-0">Temas</p>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                <label class="form-check-label" for="defaultCheck1">
+                                  Produtos
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                <label class="form-check-label" for="defaultCheck1">
+                                  Voluntariado
+                                </label>
+                            </div>
+                        </div>
+                    </div><!-- /temas/categorias -->
+                </div>
+            </div>
+        </div> <!-- /filtros -->
+
+        <!-- itens do feed -->
+        <div class="col-md-5">
+            <div class="row bg-secondary p-2 mb-3"><!-- item do feed -->
+                <div class="col-md">
+                    <div class="row mb-3"><!-- foto usuario e título -->
+                        <div class="col-md d-flex align-items-center">
+                            <img class="rounded-circle img-fluid" src="../../../../assets/img/ninjas/matheus.jfif" alt="Matheus Ribeiro" width="50px">
+                            <p class="px-2 m-0">Kewin Souto - Está oferecendo ajuda - 30/02/2021 12:04</p>
+                        </div>
+                    </div><!-- /foto usuario e título -->
+                    <div class="row"><!-- texto -->
+                        <div class="col-md">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium veniam quas quibusdam. Dolor, numquam dignissimos illo iusto quisquam nihil quibusdam exercitationem perspiciatis laboriosam iste ipsum rem impedit sunt voluptatem eveniet.</p>
+                        </div>
+                    </div><!-- /texto -->
+                    <div class="row"><!-- foto publicação -->
+                        <div class="col-md">
+                            <img src="../../../../assets/img/ninjas/miltonjunior.jpg" alt="Milton" width="100%">
+                        </div>
+                    </div><!-- /foto publicação -->
+                    <div class="row pt-2">
+                        <div class="col-md d-flex justify-content-between align-items-center">
+                            <p class="m-0">Pedindo produtos</p>
+                            <a class="btn btn-warning" data-toggle="modal" data-target="#editarPostagem">Editar postagem</a>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- /item do feed -->
+        </div>
+    </div>
+</div>
+
+<!-- Modal Editar Postagem -->
+<div class="modal fade" id="editarPostagem" tabindex="-1" aria-labelledby="editarPostagemLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="editarPostagemLabel">Editar publicação</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="tipoPostagem">Oferecendo ou Pedindo Ajuda</label>
+                    <select class="form-control" name="tipoPostagem">
+                        <option value="0">Oferecendo Ajuda</option>
+                        <option value="1" selected>Pedindo Ajuda</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="descricao">Descrição</label>
+                    <textarea class="form-control" id="descricao" placeholder="Descreva seu pedido ou oferta"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="categoria">Categoria</label>
+                    <select class="form-control" name="categoria">
+                        <option value="0">Produtos</option>
+                        <option value="1">Voluntariado</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="imagemUrl">Imagem</label>
+                    <input class="form-control" type="text" name="imagemUrl" id="imagemUrl" placeholder="Informe a URL da Foto">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-success">Editar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<app-rodape></app-rodape>
