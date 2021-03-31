@@ -10,8 +10,8 @@
             </div>
             <div class="row justify-content-center">
                 <div class="col-md-8 d-flex justify-content-center">
-                    <a href="" class="btn btn-lg btn-success mr-3">Pedir Ajuda</a>
-                    <a href="" class="btn btn-lg btn-info">Oferecer Ajuda</a>
+                    <a data-toggle="modal" data-target="#pedirAjuda" class="btn btn-lg btn-success mr-3">Pedir Ajuda</a>
+                    <a data-toggle="modal" data-target="#oferecerAjuda" href="" class="btn btn-lg btn-info">Oferecer Ajuda</a>
                 </div>
             </div>
         </div>
@@ -98,6 +98,90 @@
                     </div>
                 </div>
             </div><!-- /item do feed -->
+        </div>
+    </div>
+</div>
+
+<!-- Modal Pedir Ajuda -->
+<div class="modal fade" id="pedirAjuda" tabindex="-1" aria-labelledby="pedirAjudaLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="pedirAjudaLabel">Fazer nova publicação</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="tipoPostagem">Oferecendo ou Pedindo Ajuda</label>
+                    <select class="form-control" name="tipoPostagem">
+                        <option value="0">Oferecendo Ajuda</option>
+                        <option value="1" selected>Pedindo Ajuda</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="descricao">Descrição</label>
+                    <textarea class="form-control" id="descricao" placeholder="Descreva seu pedido ou oferta"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="categoria">Categoria</label>
+                    <select class="form-control" name="categoria">
+                        <option value="0">Produtos</option>
+                        <option value="1">Voluntariado</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="imagemUrl">Imagem</label>
+                    <input class="form-control" type="text" name="imagemUrl" id="imagemUrl" placeholder="Informe a URL da Foto">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-success">Publicar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Oferecendo Ajuda -->
+<div class="modal fade" id="oferecerAjuda" tabindex="-1" aria-labelledby="oferecerAjudaLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="oferecerAjudaLabel">Fazer nova publicação</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="tipoPostagem">Oferecendo ou Pedindo Ajuda</label>
+                    <select class="form-control" name="tipoPostagem">
+                        <option value="0" selected>Oferecendo Ajuda</option>
+                        <option value="1">Pedindo Ajuda</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="descricao">Descrição</label>
+                    <textarea class="form-control" id="descricao" placeholder="Descreva seu pedido ou oferta"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="categoria">Categoria</label>
+                    <select class="form-control" name="categoria">
+                        <option value="0">Produtos</option>
+                        <option value="1">Voluntariado</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="imagemUrl">Imagem</label>
+                    <input class="form-control" type="text" name="imagemUrl" id="imagemUrl" placeholder="Informe a URL da Foto">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-success">Publicar</button>
+            </div>
         </div>
     </div>
 </div>
