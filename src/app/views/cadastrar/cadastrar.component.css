@@ -1,0 +1,8 @@
+.bg-cadastrar {
+    background-image: url(../../../assets/img/bg-cadastrar.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    height: 100vh;
+}
