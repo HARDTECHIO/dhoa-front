@@ -8,6 +8,8 @@ import { RodapeComponent } from './template/rodape/rodape.component';
 import { SiteComponent } from './views/site/site.component';
 import { EntrarComponent } from './views/entrar/entrar.component';
 import { CadastrarComponent } from './views/cadastrar/cadastrar.component';
+import { MenuPrincipalComponent } from './template/menu-principal/menu-principal.component';
+import { InicioComponent } from './views/principal/inicio/inicio.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { CadastrarComponent } from './views/cadastrar/cadastrar.component';
     RodapeComponent,
     SiteComponent,
     EntrarComponent,
-    CadastrarComponent
+    CadastrarComponent,
+    MenuPrincipalComponent,
+    InicioComponent
   ],
   imports: [
     BrowserModule,
