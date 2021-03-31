@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { CadastrarComponent } from './views/cadastrar/cadastrar.component';
 import { EntrarComponent } from './views/entrar/entrar.component';
 import { InicioComponent } from './views/principal/inicio/inicio.component';
+import { PerfilComponent } from './views/principal/perfil/perfil.component';
 import { SiteComponent } from './views/site/site.component';
 
 const routes: Routes = [
@@ -12,7 +13,8 @@ const routes: Routes = [
   {path: 'cadastrar', component: CadastrarComponent},
   
   // Rotas do usuário logado
-  {path: '', component: InicioComponent}
+  {path: '', component: InicioComponent},
+  {path: 'perfil', component: PerfilComponent}
 ];
 
 @NgModule({

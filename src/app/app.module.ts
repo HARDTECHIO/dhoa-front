@@ -10,6 +10,7 @@ import { EntrarComponent } from './views/entrar/entrar.component';
 import { CadastrarComponent } from './views/cadastrar/cadastrar.component';
 import { MenuPrincipalComponent } from './template/menu-principal/menu-principal.component';
 import { InicioComponent } from './views/principal/inicio/inicio.component';
+import { PerfilComponent } from './views/principal/perfil/perfil.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { InicioComponent } from './views/principal/inicio/inicio.component';
     EntrarComponent,
     CadastrarComponent,
     MenuPrincipalComponent,
-    InicioComponent
+    InicioComponent,
+    PerfilComponent
   ],
   imports: [
     BrowserModule,
