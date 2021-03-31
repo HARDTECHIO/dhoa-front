@@ -34,3 +34,42 @@
     resize: none;
     padding: 11px;
 }
+
+.titulo {
+    font-size:60px;
+    color: #272b44;
+
+}
+
+.subtitulo {
+    font-size:30px;
+    color: #272b44;
+
+}
+
+.texto {
+ color: #706c87;
+
+}
+
+.bg-verde {
+    background-color: #e5f7f2;
+}
+
+.equipe-hobbie p {
+    font-style: italic;
+    color: #069a92;
+
+}
+
+.equipe-hobbie ul li {
+    list-style: none;
+    padding: 0 10px;
+    font-size: 35px;
+
+}
+
+.equipe-hobbie ul  {
+    margin-top: -25px;
+
+}
