@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,6 +14,7 @@ import { MenuPrincipalComponent } from './template/menu-principal/menu-principal
 import { InicioComponent } from './views/principal/inicio/inicio.component';
 import { PerfilComponent } from './views/principal/perfil/perfil.component';
 import { MinhasPostagensComponent } from './views/principal/minhas-postagens/minhas-postagens.component';
+
 
 @NgModule({
   declarations: [
@@ -28,7 +31,9 @@ import { MinhasPostagensComponent } from './views/principal/minhas-postagens/min
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

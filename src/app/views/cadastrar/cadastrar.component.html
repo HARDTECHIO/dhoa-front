@@ -5,31 +5,31 @@
                 <h1 class="mb-2 text-center">Cadastro</h1>
                 <div class="form-group">
                     <label for="nome">Nome</label>
-                    <input name="nome" type="text" class="form-control" id="nome"
-                        placeholder="Insira seu nome">
+                    <input [(ngModel)]='usuario.nome' name="nome" type="text" class="form-control" id="nome"
+                     placeholder="Insira seu nome" >
                 </div>
                 <div class="form-group">
                     <label for="email">E-mail</label>
-                    <input name="email" type="text" class="form-control" id="email"
+                    <input [(ngModel)]='usuario.email' name="email" type="text" class="form-control" id="email"
                         placeholder="Insira seu email">
                 </div>
                 <div class="form-group">
                     <label for="linkFoto">Link da foto</label>
-                    <input name="foto" type="url" class="form-control" id="linkFoto"
+                    <input [(ngModel)]='usuario.imagemUrl' name="foto" type="url" class="form-control" id="linkFoto"
                         placeholder="Insira o link da sua foto">
                 </div>
                 <div class="form-group">
                     <label for="senha">Senha</label>
-                    <input name="senhaConfirmacao" type="password" class="form-control"
+                    <input (input)='confirmSenha($event)' name="senhaConfirmacao" type="password" class="form-control"
                         id="senhaConfirmacao" placeholder="Insira sua senha">
                 </div>
                 <div class="form-group">
                     <label for="senhaConfirmacao">Confirmar Senha</label>
-                    <input name="senha" type="password" class="form-control" id="senha"
+                    <input [(ngModel)]='usuario.senha'name="senha" type="password" class="form-control" id="senha"
                         placeholder="Confirme sua senha">
                 </div>
                 <div class="d-flex justify-content-end">
-                    <button type="submit" class="btn btn-primary px-5">Cadastrar</button>
+                    <button type="submit" class="btn btn-primary px-5" (click)='cadastrar()'>Cadastrar</button>
                 </div>
                 <div class="mt-4 text-center">
                     <p>Já tem cadastro? <a routerLink='/entrar'>Entrar</a></p>
