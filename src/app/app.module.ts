@@ -14,6 +14,7 @@ import { MenuPrincipalComponent } from './template/menu-principal/menu-principal
 import { InicioComponent } from './views/principal/inicio/inicio.component';
 import { PerfilComponent } from './views/principal/perfil/perfil.component';
 import { MinhasPostagensComponent } from './views/principal/minhas-postagens/minhas-postagens.component';
+import { CategoriasComponent } from './views/principal/categorias/categorias.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { MinhasPostagensComponent } from './views/principal/minhas-postagens/min
     MenuPrincipalComponent,
     InicioComponent,
     PerfilComponent,
-    MinhasPostagensComponent
+    MinhasPostagensComponent,
+    CategoriasComponent
   ],
   imports: [
     BrowserModule,

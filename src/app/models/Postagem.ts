@@ -1,5 +1,5 @@
 import { Usuario } from './Usuario';
-import { Categorias } from './Categoria';
+import { Categoria } from './Categoria';
 
 export class Postagem{
   public id: number
@@ -8,6 +8,6 @@ export class Postagem{
   public imagemUrl: string
   public contatoUrl: string
   public dataPostagem: Date
-  public categoria: Categorias
+  public categoria: Categoria
   public usuario: Usuario
 }

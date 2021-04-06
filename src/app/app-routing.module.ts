@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CadastrarComponent } from './views/cadastrar/cadastrar.component';
 import { EntrarComponent } from './views/entrar/entrar.component';
+import { CategoriasComponent } from './views/principal/categorias/categorias.component';
 import { InicioComponent } from './views/principal/inicio/inicio.component';
 import { MinhasPostagensComponent } from './views/principal/minhas-postagens/minhas-postagens.component';
 import { PerfilComponent } from './views/principal/perfil/perfil.component';
@@ -16,7 +17,10 @@ const routes: Routes = [
   // Rotas do usuário logado
   {path: '', component: InicioComponent},
   {path: 'perfil', component: PerfilComponent},
-  {path: 'minhas-postagens', component: MinhasPostagensComponent}
+  {path: 'minhas-postagens', component: MinhasPostagensComponent},
+  
+  //Rotas Usuarios ADM
+  {path: 'categorias', component: CategoriasComponent}
 ];
 
 @NgModule({

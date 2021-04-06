@@ -11,14 +11,14 @@
                 <ul class="navbar-nav ml-auto d-flex align-items-center">
                     <li class="nav-item dropdown">
                         <div class="d-flex align-items-center">
-                            <img src="../../../assets/img/ninjas/lucasalves.jfif" alt="Foto do usuário"
-                                class="rounded-circle img-fluid" width="50px">
+                            <img src="{{foto}}" alt="Foto do usuário" class="rounded-circle img-fluid" width="50px">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Lucas Alves
+                                {{nome}}
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                 <a class="dropdown-item" routerLink='/perfil'>Ver meu Perfil</a>
+                                <a *ngIf="isAdmin()" class="dropdown-item" routerLink='/categorias'>Ver categorias</a>
                                 <a class="dropdown-item" routerLink='/minhas-postagens'>Ver minhas postagens</a>
                                 <a class="dropdown-item" href="#">Sair</a>
                             </div>
