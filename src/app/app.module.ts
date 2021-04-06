@@ -14,6 +14,8 @@ import { MenuPrincipalComponent } from './template/menu-principal/menu-principal
 import { InicioComponent } from './views/principal/inicio/inicio.component';
 import { PerfilComponent } from './views/principal/perfil/perfil.component';
 import { MinhasPostagensComponent } from './views/principal/minhas-postagens/minhas-postagens.component';
+import { EditarPostagensComponent } from './views/principal/editar/editar-postagens/editar-postagens.component';
+import { DeletarPostagensComponent } from './views/principal/deletar/deletar-postagens/deletar-postagens.component';
 
 
 @NgModule({
@@ -27,7 +29,9 @@ import { MinhasPostagensComponent } from './views/principal/minhas-postagens/min
     MenuPrincipalComponent,
     InicioComponent,
     PerfilComponent,
-    MinhasPostagensComponent
+    MinhasPostagensComponent,
+    EditarPostagensComponent,
+    DeletarPostagensComponent
   ],
   imports: [
     BrowserModule,

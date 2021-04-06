@@ -19,7 +19,10 @@ export class AuthService {
     const url = this.baseUrl + '/usuarios/logar'
     return this.http.post<UsuarioLogin>(url, usuarioLogin)
   }
-
+  getByIdUser(id:number):Observable<Usuario>{
+    const url = this.baseUrl + `/usuarios/${id}`
+    return this.http.get<Usuario>(url)  
+  }
   cadastrar(usuario: Usuario): Observable<Usuario>{
     const url = this.baseUrl + "/usuarios/cadastrar"
     return this.http.post<Usuario>(url, usuario)

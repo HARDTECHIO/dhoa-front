@@ -108,25 +108,25 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="pedirAjudaLabel">Fazer nova publicação</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <button  type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
             <div class="modal-body">
                 <div class="form-group">
                     <label for="tipoPostagem">Oferecendo ou Pedindo Ajuda</label>
-                    <select class="form-control" name="tipoPostagem">
-                        <option value="0">Oferecendo Ajuda</option>
-                        <option value="1" selected>Pedindo Ajuda</option>
+                    <select (change)="verificaTipoPostagem($event)" class="form-control" name="tipoPostagem">
+                        <option value="oferecendo">Oferecendo Ajuda</option>
+                        <option value="pedindo" selected>Pedindo Ajuda</option>
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="descricao">Descrição</label>
-                    <textarea class="form-control" id="descricao" placeholder="Descreva seu pedido ou oferta"></textarea>
+                    <label for="texto">Descrição</label>
+                    <textarea [(ngModel)]="postagem.texto" class="form-control" id="texto" placeholder="Descreva seu pedido ou oferta"></textarea>
                 </div>
                 <div class="form-group">
                     <label for="categoria">Categoria</label>
-                    <select class="form-control" name="categoria">
+                    <select [(ngModel)]="name" class="form-control" name="categoria">
                         <option value="0">Produtos</option>
                         <option value="1">Voluntariado</option>
                     </select>

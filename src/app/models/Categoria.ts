@@ -1,6 +1,6 @@
 import { Postagem } from './Postagem';
 import { Usuario } from './Usuario';
-export class Categorias{
+export class Categoria{
   public id: number
   public nome: string
   public descricao: string

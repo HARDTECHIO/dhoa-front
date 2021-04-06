@@ -9,7 +9,8 @@ export class MinhasPostagensComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit() {
   }
 
 }
+
