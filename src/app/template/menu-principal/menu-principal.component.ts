@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { environment } from 'src/environments/environment.prod';
 
 @Component({
   selector: 'app-menu-principal',
@@ -7,9 +9,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuPrincipalComponent implements OnInit {
 
-  constructor() { }
 
-  ngOnInit(): void {
+  nome = environment.nome
+  foto = environment.foto
+  id = environment.id
+
+  constructor(
+    private router: Router
+  ) { }
+
+  ngOnInit() {
   }
 
+  isAdmin() {
+    let resp = false
+    if (environment.tipoUsuario == 'admin') {
+      resp = true
+    }
+    return resp
+  }
 }

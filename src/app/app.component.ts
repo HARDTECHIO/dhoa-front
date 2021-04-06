@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { environment } from 'src/environments/environment.prod';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'doa-front';
+
+  constructor(
+    private router: Router
+  ){}
+
+  ngOnInit(){
+    if(environment.token == ''){
+      this.router.navigate(['/site'])
+    }
+  }
 }

@@ -16,6 +16,7 @@ import { PerfilComponent } from './views/principal/perfil/perfil.component';
 import { MinhasPostagensComponent } from './views/principal/minhas-postagens/minhas-postagens.component';
 import { EditarPostagensComponent } from './views/principal/editar/editar-postagens/editar-postagens.component';
 import { DeletarPostagensComponent } from './views/principal/deletar/deletar-postagens/deletar-postagens.component';
+import { CategoriasComponent } from './views/principal/categorias/categorias.component';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { DeletarPostagensComponent } from './views/principal/deletar/deletar-pos
     PerfilComponent,
     MinhasPostagensComponent,
     EditarPostagensComponent,
-    DeletarPostagensComponent
+    DeletarPostagensComponent,
+    CategoriasComponent
   ],
   imports: [
     BrowserModule,
