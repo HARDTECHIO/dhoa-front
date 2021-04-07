@@ -17,9 +17,9 @@ export class InicioComponent implements OnInit {
 
   postagem: Postagem = new Postagem()
   postagens: Postagem[]
-  tipoPostagem: string
 
   idUsuario = environment.id
+  emailUsuario = environment.email
   usuario: Usuario = new Usuario()
 
   categoria: Categoria = new Categoria()
@@ -35,8 +35,9 @@ export class InicioComponent implements OnInit {
   ngOnInit()  { 
     this.listarPostagens()
     this.listarCategorias()
-
+    console.log(this.listarPostagens())
   }
+
   listarPostagens() {
     this.postagemService.findAll().subscribe((resp: Postagem[]) => {
       this.postagens = resp
@@ -46,23 +47,31 @@ export class InicioComponent implements OnInit {
   publicar() {
     this.categoria.id = this.idCategoria 
     this.postagem.categoria = this.categoria
+
     this.usuario.id = this.idUsuario
     this.postagem.usuario = this.usuario
+
+    this.postagem.contatoUrl = this.emailUsuario
+
     this.postagemService.create(this.postagem).subscribe((resp: Postagem) => {
-      this.postagem = resp 
-      console.log(this.postagem)
+      this.postagem = resp
       alert('Postagem realizada com sucesso')
       this.postagem = new Postagem()
+      this.listarPostagens()
     })
+
+    console.log(this.postagem)
   }
   findByIdUser() {
     this.authService.getByIdUser(this.idUsuario).subscribe((resp: Usuario) => {
       this.usuario = resp 
     })
   }
+
   verificaTipoPostagem(event:any) {
-    this.tipoPostagem = event.target.value
+    this.postagem.tipoPostagem = event.target.value
   }
+
   listarCategorias() {
     this.categoriaService.findAll().subscribe((resp: Categoria[]) => {
       this.categorias = resp

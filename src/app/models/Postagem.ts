@@ -1,9 +1,8 @@
 import { Usuario } from './Usuario';
 import { Categoria } from './Categoria';
 
-export class Postagem{
+export class Postagem {
   public id: number
-
   public tipoPostagem: string
   public texto: string
   public imagemUrl: string

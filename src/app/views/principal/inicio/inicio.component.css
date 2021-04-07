@@ -7,3 +7,7 @@
     color: #706c87;
     font-size: 20px;
 }
+
+.cap {
+    text-transform: capitalize;
+}

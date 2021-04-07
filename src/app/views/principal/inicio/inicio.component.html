@@ -78,35 +78,33 @@
 
         <!-- itens do feed -->
         <div class="col-md-5">
-            <div class="row bg-secondary p-2 mb-3">
+            <div *ngFor="let postagem of postagens" class="row bg-secondary p-2 mb-3">
                 <!-- item do feed -->
                 <div class="col-md">
                     <div class="row mb-3">
                         <!-- foto usuario e título -->
                         <div class="col-md d-flex align-items-center">
-                            <img class="rounded-circle img-fluid" src="../../../../assets/img/ninjas/matheus.jfif"
-                                alt="Matheus Ribeiro" width="50px">
-                            <p class="px-2 m-0">Kewin Souto - Está oferecendo ajuda - 30/02/2021 12:04</p>
+                            <img class="rounded-circle img-fluid" src="{{postagem.usuario.imagemUrl}}"
+                                alt="{{postagem.usuario.nome}}" width="50px" height="50px">
+                            <p class="px-2 m-0">{{postagem.usuario.nome}} - Está <span class="cap">{{postagem.tipoPostagem}}</span> ajuda - {{postagem.dataPostagem | date}}</p>
                         </div>
                     </div><!-- /foto usuario e título -->
                     <div class="row">
                         <!-- texto -->
                         <div class="col-md">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium veniam quas
-                                quibusdam. Dolor, numquam dignissimos illo iusto quisquam nihil quibusdam exercitationem
-                                perspiciatis laboriosam iste ipsum rem impedit sunt voluptatem eveniet.</p>
+                            <p>{{postagem.texto}}</p>
                         </div>
                     </div><!-- /texto -->
                     <div class="row">
                         <!-- foto publicação -->
                         <div class="col-md">
-                            <img src="../../../../assets/img/ninjas/miltonjunior.jpg" alt="Milton" width="100%">
+                            <img src="{{postagem.imagemUrl}}" alt="{{postagem.usuario.nome}} - Está <span class='cap'>{{postagem.tipoPostagem}}</span> ajuda" width="100%">
                         </div>
                     </div><!-- /foto publicação -->
                     <div class="row pt-2">
                         <div class="col-md d-flex justify-content-between align-items-center">
-                            <p class="m-0">Pedindo produtos</p>
-                            <a class="btn btn-primary" href="">Entrar em contato</a>
+                            <p class="m-0"><span class='cap'>{{postagem.tipoPostagem}} {{postagem.categoria.nome}}</span></p>
+                            <a class="btn btn-primary" href="mailto:{{postagem.contatoUrl}}">Entrar em contato</a>
                         </div>
                     </div>
                 </div>
@@ -152,7 +150,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
-                <button (click)="publicar()" type="button" class="btn btn-success">Publicar</button>
+                <button (click)="publicar()" type="button" class="btn btn-success" data-dismiss="modal">Publicar</button>
             </div>
         </div>
     </div>
@@ -171,32 +169,31 @@
             <div class="modal-body">
                 <div class="form-group">
                     <label for="tipoPostagem">Oferecendo ou Pedindo Ajuda</label>
-                    <select class="form-control" name="tipoPostagem">
-                        <option value="0" selected>Oferecendo Ajuda</option>
-                        <option value="1">Pedindo Ajuda</option>
+                    <select (change)="verificaTipoPostagem($event)" class="form-control" name="tipoPostagem">
+                        <option value="oferecendo" selected>Oferecendo Ajuda</option>
+                        <option value="pedindo">Pedindo Ajuda</option>
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="descricao">Descrição</label>
-                    <textarea class="form-control" id="descricao"
+                    <label for="texto">Descrição</label>
+                    <textarea [(ngModel)]="postagem.texto" class="form-control" id="texto"
                         placeholder="Descreva seu pedido ou oferta"></textarea>
                 </div>
                 <div class="form-group">
                     <label for="categoria">Categoria</label>
-                    <select class="form-control" name="categoria">
-                        <option value="0">Produtos</option>
-                        <option value="1">Voluntariado</option>
+                    <select [(ngModel)]="idCategoria" (change)="getCategoria()" class="form-control" name="categoria">
+                        <option *ngFor="let item of categorias" value="{{item.id}}">{{item.nome}}</option>
                     </select>
                 </div>
                 <div class="form-group">
                     <label for="imagemUrl">Imagem</label>
-                    <input class="form-control" type="text" name="imagemUrl" id="imagemUrl"
+                    <input [(ngModel)]="postagem.imagemUrl" class="form-control" type="text" name="imagemUrl" id="imagemUrl"
                         placeholder="Informe a URL da Foto">
                 </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
-                <button type="button" class="btn btn-success">Publicar</button>
+                <button (click)="publicar()" type="button" class="btn btn-success" data-dismiss="modal">Publicar</button>
             </div>
         </div>
     </div>
