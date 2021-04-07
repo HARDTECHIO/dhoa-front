@@ -19,11 +19,11 @@ export class PostagemService {
   }
 
   create(postagem: Postagem): Observable<Postagem> {
-    const url = this.baseurl + "/postagens"
+    const url = this.baseurl + '/postagens'
     return this.http.post<Postagem>(url, postagem, this.token)
   }
   findAll(): Observable<Postagem[]> {
-    const url = this.baseurl + "/postagens"
+    const url = this.baseurl + '/postagens'
     return this.http.get<Postagem[]>(url, this.token)
   }
 }

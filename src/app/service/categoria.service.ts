@@ -15,13 +15,13 @@ export class CategoriaService {
     private http: HttpClient
   ) { }
 
-  token = { 
+  token = {
     headers: {
       'Authorization': environment.token
     }
   }
 
-  create(categoria: Categoria): Observable<Categoria>{
+  create(categoria: Categoria): Observable<Categoria> {
     const url = this.baseUrl + '/categorias'
     return this.http.post<Categoria>(url, categoria, this.token)
   }
@@ -29,5 +29,10 @@ export class CategoriaService {
   findAll(): Observable<Categoria[]> {
     const url = this.baseUrl + '/categorias'
     return this.http.get<Categoria[]>(url, this.token)
+  }
+
+  findById(id: number): Observable<Categoria> {
+    const url = this.baseUrl + `/categorias/${id}`
+    return this.http.get<Categoria>(url, this.token)
   }
 }

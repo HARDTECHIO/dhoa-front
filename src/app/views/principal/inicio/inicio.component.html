@@ -5,13 +5,16 @@
             <div class="row justify-content-center">
                 <div class="col-md-8">
                     <h1 class="text-center titulo-header">Fazer o bem sem olhar a quem</h1>
-                    <p class="text-center texto-header">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad laborum magnam ipsa vitae iste! Dolorem quibusdam, praesentium necessitatibus temporibus officia asperiores eum inventore consequatur nam officiis rerum quidem, tempore ullam!</p>
+                    <p class="text-center texto-header">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad
+                        laborum magnam ipsa vitae iste! Dolorem quibusdam, praesentium necessitatibus temporibus officia
+                        asperiores eum inventore consequatur nam officiis rerum quidem, tempore ullam!</p>
                 </div>
             </div>
             <div class="row justify-content-center">
                 <div class="col-md-8 d-flex justify-content-center">
                     <a data-toggle="modal" data-target="#pedirAjuda" class="btn btn-lg btn-success mr-3">Pedir Ajuda</a>
-                    <a data-toggle="modal" data-target="#oferecerAjuda" href="" class="btn btn-lg btn-info">Oferecer Ajuda</a>
+                    <a data-toggle="modal" data-target="#oferecerAjuda" href="" class="btn btn-lg btn-info">Oferecer
+                        Ajuda</a>
                 </div>
             </div>
         </div>
@@ -23,7 +26,8 @@
 
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-3 mr-3"> <!-- filtros -->
+        <div class="col-md-3 mr-3">
+            <!-- filtros -->
             <div class="row">
                 <div class="col-md bg-secondary p-4">
                     <div class="row">
@@ -31,37 +35,39 @@
                             <h5>Filtros</h5>
                         </div>
                     </div>
-                    <div class="row mb-3"><!-- tipo postagem -->
+                    <div class="row mb-3">
+                        <!-- tipo postagem -->
                         <div class="col-md">
                             <p class="m-0">Tipo de Publicação</p>
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
                                 <label class="form-check-label" for="defaultCheck1">
-                                  Oferecendo Ajuda
+                                    Oferecendo Ajuda
                                 </label>
                             </div>
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
                                 <label class="form-check-label" for="defaultCheck1">
-                                  Pedindo Ajuda
+                                    Pedindo Ajuda
                                 </label>
                             </div>
                         </div>
                     </div><!-- /tipo postagem -->
-        
-                    <div class="row"><!-- temas/categorias -->
+
+                    <div class="row">
+                        <!-- temas/categorias -->
                         <div class="col-md">
                             <p class="m-0">Temas</p>
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
                                 <label class="form-check-label" for="defaultCheck1">
-                                  Produtos
+                                    Produtos
                                 </label>
                             </div>
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
                                 <label class="form-check-label" for="defaultCheck1">
-                                  Voluntariado
+                                    Voluntariado
                                 </label>
                             </div>
                         </div>
@@ -72,20 +78,27 @@
 
         <!-- itens do feed -->
         <div class="col-md-5">
-            <div class="row bg-secondary p-2 mb-3"><!-- item do feed -->
+            <div class="row bg-secondary p-2 mb-3">
+                <!-- item do feed -->
                 <div class="col-md">
-                    <div class="row mb-3"><!-- foto usuario e título -->
+                    <div class="row mb-3">
+                        <!-- foto usuario e título -->
                         <div class="col-md d-flex align-items-center">
-                            <img class="rounded-circle img-fluid" src="../../../../assets/img/ninjas/matheus.jfif" alt="Matheus Ribeiro" width="50px">
+                            <img class="rounded-circle img-fluid" src="../../../../assets/img/ninjas/matheus.jfif"
+                                alt="Matheus Ribeiro" width="50px">
                             <p class="px-2 m-0">Kewin Souto - Está oferecendo ajuda - 30/02/2021 12:04</p>
                         </div>
                     </div><!-- /foto usuario e título -->
-                    <div class="row"><!-- texto -->
+                    <div class="row">
+                        <!-- texto -->
                         <div class="col-md">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium veniam quas quibusdam. Dolor, numquam dignissimos illo iusto quisquam nihil quibusdam exercitationem perspiciatis laboriosam iste ipsum rem impedit sunt voluptatem eveniet.</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium veniam quas
+                                quibusdam. Dolor, numquam dignissimos illo iusto quisquam nihil quibusdam exercitationem
+                                perspiciatis laboriosam iste ipsum rem impedit sunt voluptatem eveniet.</p>
                         </div>
                     </div><!-- /texto -->
-                    <div class="row"><!-- foto publicação -->
+                    <div class="row">
+                        <!-- foto publicação -->
                         <div class="col-md">
                             <img src="../../../../assets/img/ninjas/miltonjunior.jpg" alt="Milton" width="100%">
                         </div>
@@ -108,7 +121,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="pedirAjudaLabel">Fazer nova publicação</h5>
-                <button  type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
@@ -122,23 +135,24 @@
                 </div>
                 <div class="form-group">
                     <label for="texto">Descrição</label>
-                    <textarea [(ngModel)]="postagem.texto" class="form-control" id="texto" placeholder="Descreva seu pedido ou oferta"></textarea>
+                    <textarea [(ngModel)]="postagem.texto" class="form-control" id="texto"
+                        placeholder="Descreva seu pedido ou oferta"></textarea>
                 </div>
                 <div class="form-group">
                     <label for="categoria">Categoria</label>
-                    <select  class="form-control" name="categoria">
-                        <option value="0">Produtos</option>
-                        <option value="1">Voluntariado</option>
+                    <select [(ngModel)]="idCategoria" (change)="getCategoria()" class="form-control" name="categoria">
+                        <option *ngFor="let item of categorias" value="{{item.id}}">{{item.nome}}</option>
                     </select>
                 </div>
                 <div class="form-group">
                     <label for="imagemUrl">Imagem</label>
-                    <input class="form-control" type="text" name="imagemUrl" id="imagemUrl" placeholder="Informe a URL da Foto">
+                    <input [(ngModel)]="postagem.imagemUrl" class="form-control" type="text" name="imagemUrl" id="imagemUrl"
+                        placeholder="Informe a URL da Foto">
                 </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
-                <button type="button" class="btn btn-success">Publicar</button>
+                <button (click)="publicar()" type="button" class="btn btn-success">Publicar</button>
             </div>
         </div>
     </div>
@@ -164,7 +178,8 @@
                 </div>
                 <div class="form-group">
                     <label for="descricao">Descrição</label>
-                    <textarea class="form-control" id="descricao" placeholder="Descreva seu pedido ou oferta"></textarea>
+                    <textarea class="form-control" id="descricao"
+                        placeholder="Descreva seu pedido ou oferta"></textarea>
                 </div>
                 <div class="form-group">
                     <label for="categoria">Categoria</label>
@@ -175,7 +190,8 @@
                 </div>
                 <div class="form-group">
                     <label for="imagemUrl">Imagem</label>
-                    <input class="form-control" type="text" name="imagemUrl" id="imagemUrl" placeholder="Informe a URL da Foto">
+                    <input class="form-control" type="text" name="imagemUrl" id="imagemUrl"
+                        placeholder="Informe a URL da Foto">
                 </div>
             </div>
             <div class="modal-footer">
@@ -186,3 +202,4 @@
     </div>
 </div>
 <app-rodape></app-rodape>
+

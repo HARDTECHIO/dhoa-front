@@ -4,6 +4,7 @@ import { Categoria } from 'src/app/models/Categoria';
 import { Postagem } from 'src/app/models/Postagem';
 import { Usuario } from 'src/app/models/Usuario';
 import { AuthService } from 'src/app/service/auth.service';
+import { CategoriaService } from 'src/app/service/categoria.service';
 import { PostagemService } from 'src/app/service/postagem.service';
 import { environment } from 'src/environments/environment.prod';
 
@@ -28,20 +29,28 @@ export class InicioComponent implements OnInit {
   constructor(
     private router: Router,
     private postagemService: PostagemService,
-    private authService: AuthService
+    private authService: AuthService,
+    private categoriaService: CategoriaService
   ) { }
   ngOnInit()  { 
     this.listarPostagens()
-      
+    this.listarCategorias()
+
   }
   listarPostagens() {
     this.postagemService.findAll().subscribe((resp: Postagem[]) => {
       this.postagens = resp
     })
   }
+
   publicar() {
+    this.categoria.id = this.idCategoria 
+    this.postagem.categoria = this.categoria
+    this.usuario.id = this.idUsuario
+    this.postagem.usuario = this.usuario
     this.postagemService.create(this.postagem).subscribe((resp: Postagem) => {
-      this.postagem = resp
+      this.postagem = resp 
+      console.log(this.postagem)
       alert('Postagem realizada com sucesso')
       this.postagem = new Postagem()
     })
@@ -54,5 +63,14 @@ export class InicioComponent implements OnInit {
   verificaTipoPostagem(event:any) {
     this.tipoPostagem = event.target.value
   }
-  
+  listarCategorias() {
+    this.categoriaService.findAll().subscribe((resp: Categoria[]) => {
+      this.categorias = resp
+    })
+  }
+  getCategoria() {
+    this.categoriaService.findById(this.idCategoria).subscribe((resp: Categoria) => {
+      this.categoria = resp
+    })
+  }
 }
