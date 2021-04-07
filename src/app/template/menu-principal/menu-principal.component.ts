@@ -28,4 +28,18 @@ export class MenuPrincipalComponent implements OnInit {
     }
     return resp
   }
+
+  logout() {
+    this.router.navigate(['/site'])
+    this.clearEnv()
+  }
+
+  clearEnv() {
+    environment.id = 0
+    environment.nome = ''
+    environment.foto = ''
+    environment.email = ''
+    environment.tipoUsuario = ''
+    environment.token = ''
+  }
 }

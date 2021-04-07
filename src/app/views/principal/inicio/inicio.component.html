@@ -5,21 +5,19 @@
             <div class="row justify-content-center">
                 <div class="col-md-8">
                     <h1 class="text-center titulo-header">Fazer o bem sem olhar a quem</h1>
-                    <p class="text-center texto-header">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad
-                        laborum magnam ipsa vitae iste! Dolorem quibusdam, praesentium necessitatibus temporibus officia
-                        asperiores eum inventore consequatur nam officiis rerum quidem, tempore ullam!</p>
+                    <p class="text-center texto-header">Viemos aqui para dar potência a sua voz, e ao seu pedido de ajuda, e também para dar acesso a quem possa ajuda, e assim aos poucos ir mudando o mundo.</p>
                 </div>
             </div>
             <div class="row justify-content-center">
                 <div class="col-md-8 d-flex justify-content-center">
-                    <a data-toggle="modal" data-target="#pedirAjuda" class="btn btn-lg btn-success mr-3">Pedir Ajuda</a>
-                    <a data-toggle="modal" data-target="#oferecerAjuda" href="" class="btn btn-lg btn-info">Oferecer
+                    <a data-toggle="modal" data-target="#pedirAjuda" class="btn-transparente mr-3">Pedir Ajuda</a>
+                    <a data-toggle="modal" data-target="#oferecerAjuda" href="" class="btn-verde">Oferecer
                         Ajuda</a>
                 </div>
             </div>
         </div>
         <div class="col-md d-flex justify-content-center">
-            <img src="../../../../assets/img/bg-social.png" alt="Pessoas muito loucas" width="800px">
+            <img src="../../../../assets/img/bg-social.png" alt="Pessoas muito loucas" width="100%">
         </div>
     </div>
 </div>
@@ -54,8 +52,8 @@
                         </div>
                     </div><!-- /tipo postagem -->
 
+                    <!-- temas/categorias -->
                     <div class="row">
-                        <!-- temas/categorias -->
                         <div class="col-md">
                             <p class="m-0">Temas</p>
                             <div class="form-check">
@@ -71,14 +69,16 @@
                                 </label>
                             </div>
                         </div>
-                    </div><!-- /temas/categorias -->
+                    </div>
+                    <!-- /temas/categorias -->
                 </div>
             </div>
-        </div> <!-- /filtros -->
+        </div> 
+        <!-- /filtros -->
 
         <!-- itens do feed -->
         <div class="col-md-5">
-            <div *ngFor="let postagem of postagens" class="row bg-secondary p-2 mb-3">
+            <div *ngFor="let postagem of postagens" class="row shadow p-2 mb-3">
                 <!-- item do feed -->
                 <div class="col-md">
                     <div class="row mb-3">
@@ -149,8 +149,8 @@
                 </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
-                <button (click)="publicar()" type="button" class="btn btn-success" data-dismiss="modal">Publicar</button>
+                <button type="button" class="btn-laranja" data-dismiss="modal">Cancelar</button>
+                <button (click)="publicar()" type="button" class="btn-verde" data-dismiss="modal">Publicar</button>
             </div>
         </div>
     </div>
@@ -192,8 +192,8 @@
                 </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
-                <button (click)="publicar()" type="button" class="btn btn-success" data-dismiss="modal">Publicar</button>
+                <button type="button" class="btn-laranja" data-dismiss="modal">Cancelar</button>
+                <button (click)="publicar()" type="button" class="btn-verde" data-dismiss="modal">Publicar</button>
             </div>
         </div>
     </div>
