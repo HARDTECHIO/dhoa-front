@@ -1,0 +1,24 @@
+<app-menu-principal></app-menu-principal>
+<div class="container my-5">
+    <div class="row mb-5">
+        <div class="col-md">
+            <h1 class="text-center text-secondary">Apagar Categoria</h1>
+        </div>
+    </div>
+    <div class="row mb-3">
+        <div class="col-md">
+            <h4 class="text-center text-secondary">Você tem certeza que deseja apagar essa categoria? Todas as postagem relacionadas a ele serão igualmente apagadas.</h4>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md">
+            <h5 class="text-center text-info">Categoria: {{categoria.nome}}</h5>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md d-flex justify-content-center">
+            <a routerLink="/categorias" class="btn btn-danger mr-3">Não</a>
+            <a (click)="deletar()" class="btn btn-success">Sim</a>
+        </div>
+    </div>
+</div>
