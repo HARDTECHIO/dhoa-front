@@ -55,28 +55,28 @@
 
         <!-- itens do feed -->
         <div class="col-md-5">
-            <div class="row shadow p-2 mb-3"><!-- item do feed -->
+            <div class="row shadow p-2 mb-3" *ngFor="let postagem of usuario.postagens" ><!-- item do feed -->
                 <div class="col-md">
                     <div class="row mb-3"><!-- foto usuario e título -->
                         <div class="col-md d-flex align-items-center">
-                            <img class="rounded-circle img-fluid" src="../../../../assets/img/ninjas/matheus.jfif" alt="Matheus Ribeiro" width="50px">
-                            <p class="px-2 m-0">Kewin Souto - Está oferecendo ajuda - 30/02/2021 12:04</p>
+                            <img class="rounded-circle img-fluid" src="{{postagem.usuario.imagemUrl}}" alt="{{postagem.usuario.nome}}" width="50px">
+                            <p class="px-2 m-0">{{postagem.usuario.nome}} - Está <span class="cap">{{postagem.tipoPostagem}}</span> ajuda - {{postagem.dataPostagem | date }}</p>
                         </div>
                     </div><!-- /foto usuario e título -->
                     <div class="row"><!-- texto -->
                         <div class="col-md">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium veniam quas quibusdam. Dolor, numquam dignissimos illo iusto quisquam nihil quibusdam exercitationem perspiciatis laboriosam iste ipsum rem impedit sunt voluptatem eveniet.</p>
+                            <p>{{postagem.texto}}</p>
                         </div>
                     </div><!-- /texto -->
                     <div class="row"><!-- foto publicação -->
                         <div class="col-md">
-                            <img src="../../../../assets/img/ninjas/miltonjunior.jpg" alt="Milton" width="100%">
+                            <img src="{{postagem.imagemUrl}}" alt="{{postagem.usuario.nome}}-Está <span class='cap'>{{postagem.tipoPostagem}}</span> ajuda" width="100%">
                         </div>
                     </div><!-- /foto publicação -->
                     <div class="row pt-2">
                         <div class="col-md d-flex justify-content-between align-items-center">
-                            <p class="m-0">Pedindo produtos</p>
-                            <a class="btn-verde" data-toggle="modal" data-target="#editarPostagem">Editar postagem</a>
+                            <a class="btn-verde" [routerLink]="['/postagem/editar/',postagem.id]">Editar </a>
+                            <a class="btn-verde" [routerLink]="['/postagem/apagar/',postagem.id]">Apagar</a>
                         </div>
                     </div>
                 </div>
@@ -86,45 +86,6 @@
 </div>
 
 <!-- Modal Editar Postagem -->
-<div class="modal fade" id="editarPostagem" tabindex="-1" aria-labelledby="editarPostagemLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="editarPostagemLabel">Editar publicação</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <div class="form-group">
-                    <label for="tipoPostagem">Oferecendo ou Pedindo Ajuda</label>
-                    <select class="form-control" name="tipoPostagem">
-                        <option value="0">Oferecendo Ajuda</option>
-                        <option value="1" selected>Pedindo Ajuda</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="descricao">Descrição</label>
-                    <textarea class="form-control" id="descricao" placeholder="Descreva seu pedido ou oferta"></textarea>
-                </div>
-                <div class="form-group">
-                    <label for="categoria">Categoria</label>
-                    <select class="form-control" name="categoria">
-                        <option value="0">Produtos</option>
-                        <option value="1">Voluntariado</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="imagemUrl">Imagem</label>
-                    <input class="form-control" type="text" name="imagemUrl" id="imagemUrl" placeholder="Informe a URL da Foto">
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
-                <button type="button" class="btn btn-success">Editar</button>
-            </div>
-        </div>
-    </div>
-</div>
+
 
 <app-rodape></app-rodape>

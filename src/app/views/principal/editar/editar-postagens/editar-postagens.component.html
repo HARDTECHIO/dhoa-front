@@ -1,1 +1,39 @@
-<p>editar-postagens works!</p>
+<app-menu-principal></app-menu-principal>
+
+<div class="container  mt-5">
+    
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+
+            <div class="form-group">
+                <label for="tipoPostagem">Oferecendo ou Pedindo Ajuda</label>
+                <select (change)="verificaTipoPostagem($event)" class="form-control" name="tipoPostagem">
+                    <option value="oferecendo" selected>Oferecendo Ajuda</option>
+                    <option value="pedindo">Pedindo Ajuda</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="texto">Descrição</label>
+                <textarea [(ngModel)]="postagem.texto" class="form-control" id="texto"
+                    placeholder="Descreva seu pedido ou oferta"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="categoria">Categoria</label>
+                <select [(ngModel)]="idCategoria" (change)="getCategoria()" class="form-control" name="categoria">
+                    <option *ngFor="let item of categorias" value="{{item.id}}">{{item.nome}}</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="imagemUrl">Imagem</label>
+                <input [(ngModel)]="postagem.imagemUrl" class="form-control" type="text" name="imagemUrl" id="imagemUrl"
+                    placeholder="Informe a URL da Foto">
+            </div>
+            
+            <div class="modal-footer">
+                <button type="button" class="btn-laranja" routerLink='/minhas-postagens'>Cancelar</button>
+                <button (click)="atualizar()" type="button" class="btn-verde" >Atualizar</button>
+            </div>
+        </div>
+    </div>
+</div>
+<app-rodape></app-rodape>

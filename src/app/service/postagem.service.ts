@@ -9,7 +9,7 @@ import { Postagem } from '../models/Postagem';
 })
 export class PostagemService {
 
-  baseurl = environment.baseUrl
+  baseUrl = environment.baseUrl
 
   constructor(private http: HttpClient) { }
   token = {
@@ -19,13 +19,30 @@ export class PostagemService {
   }
 
   create(postagem: Postagem): Observable<Postagem> {
-    const url = this.baseurl + '/postagens'
+    const url = this.baseUrl + '/postagens'
     return this.http.post<Postagem>(url, postagem, this.token)
   }
   findAll(): Observable<Postagem[]> {
-    const url = this.baseurl + '/postagens'
+    const url = this.baseUrl + '/postagens'
     return this.http.get<Postagem[]>(url, this.token)
   }
+
+  findById(id: number): Observable<Postagem>{
+    const url = this.baseUrl + `/postagens/${id}`
+    return this.http.get<Postagem>(url,this.token)
+  }
+
+  update(postagem: Postagem): Observable<Postagem>{
+    const url = this.baseUrl +'/postagens'
+    return this.http.put<Postagem>(url, postagem,this.token)
+  }
+
+  delete(id: number){
+    const url = this.baseUrl + `/postagens/${id}`
+    return this.http.delete(url, this.token)
+  }
+
+
 }
 
 
