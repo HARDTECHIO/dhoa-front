@@ -1,6 +1,6 @@
-# DoaFront
+# DHOA-Front
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.5.
+Esse é o Front, do projeto DHOA. 
 
 ## Development server
 
