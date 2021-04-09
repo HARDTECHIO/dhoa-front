@@ -5,6 +5,8 @@
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
+    // to use string as index of an array
+    "suppressImplicitAnyIndexErrors": true,
     "strict": true,
     "strictPropertyInitialization": false,
     "noImplicitReturns": true,

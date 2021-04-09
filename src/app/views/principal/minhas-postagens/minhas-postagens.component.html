@@ -60,7 +60,7 @@
                     <div class="row mb-3"><!-- foto usuario e título -->
                         <div class="col-md d-flex align-items-center">
                             <img class="rounded-circle img-fluid" src="{{postagem.usuario.imagemUrl}}" alt="{{postagem.usuario.nome}}" width="50px">
-                            <p class="px-2 m-0">{{postagem.usuario.nome}} - Está <span class="cap">{{postagem.tipoPostagem}}</span> ajuda - {{postagem.dataPostagem | date }}</p>
+                            <p class="px-2 m-0">{{postagem.usuario.nome}} - Está <span class="cap">{{postagem.tipoPostagem}}</span> ajuda - {{postagem.dataPostagem | dateAgo}} <i class="far fa-clock"></i>
                         </div>
                     </div><!-- /foto usuario e título -->
                     <div class="row"><!-- texto -->
