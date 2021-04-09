@@ -25,8 +25,13 @@ export class AuthService {
     return this.http.get<Usuario>(url, {headers:{'Authorization': environment.token}})  
   }
   cadastrar(usuario: Usuario): Observable<Usuario>{
-    const url = this.baseUrl + "/usuarios/cadastrar"
+    const url = this.baseUrl + '/usuarios/cadastrar'
     return this.http.post<Usuario>(url, usuario) 
+  }
+
+  update(usuario: Usuario): Observable<Usuario> {
+    const url = this.baseUrl + '/usuarios'
+    return this.http.put<Usuario>(url, usuario, {headers:{'Authorization': environment.token}})
   }
 }
 

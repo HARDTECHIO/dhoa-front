@@ -20,7 +20,6 @@ import { CategoriasComponent } from './views/principal/categorias/categorias.com
 import { EditarCategoriasComponent } from './views/principal/editar/editar-categorias/editar-categorias.component';
 import { DeletarCategoriasComponent } from './views/principal/deletar/deletar-categorias/deletar-categorias.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,

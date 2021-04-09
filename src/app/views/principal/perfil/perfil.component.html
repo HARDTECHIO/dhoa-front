@@ -17,33 +17,38 @@
             </div>
             <div class="row">
                 <div class="col-md">
-                    <form>
+                    <form class="bg-white p-5 rounded-lg col-md-6">
+                        <h1 class="mb-2 text-center">Cadastro</h1>
                         <div class="form-group">
-                            <label for="nome">Nome:</label>
-                            <input class="form-control" type="text" name="nome" id="nome" value="Lucas Alves">
+                            <label for="nome">Nome</label>
+                            <input [(ngModel)]='usuario.nome' name="nome" type="text" class="form-control" id="nome"
+                             placeholder="Insira seu nome" >
                         </div>
                         <div class="form-group">
-                            <label for="email">E-mail:</label>
-                            <input class="form-control" type="email" name="email" id="email"
-                                value="lucasalves@hardtech.com.br">
+                            <label for="email">E-mail</label>
+                            <input [(ngModel)]='usuario.email' name="email" type="text" class="form-control" id="email"
+                                placeholder="Insira seu email">
                         </div>
                         <div class="form-group">
-                            <label for="imagemUrl">Url Perfil:</label>
-                            <input class="form-control" type="text" name="imagemUrl" id="imagemUrl"
-                                value="http://localhost:4200/assets/img/ninjas/lucasalves.jfif">
+                            <label for="linkFoto">Link da foto</label>
+                            <input [(ngModel)]='usuario.imagemUrl' name="foto" type="url" class="form-control" id="linkFoto"
+                                placeholder="Insira o link da sua foto">
                         </div>
                         <div class="form-group">
-                            <label for="senha">Senha:</label>
-                            <input class="form-control" type="password" name="senha" id="senha" value="123465564">
+                            <label for="senha">Senha</label>
+                            <input (input)='confirmSenha($event)' name="senhaConfirmacao" type="password" class="form-control"
+                                id="senhaConfirmacao" placeholder="Insira sua senha">
                         </div>
                         <div class="form-group">
-                            <label for="repetirSenha">Reepita a senha:</label>
-                            <input class="form-control" type="password" name="repetirSenha" id="repetirSenha"
-                                value="123465564">
+                            <label for="senhaConfirmacao">Confirmar Senha</label>
+                            <input [(ngModel)]='usuario.senha'name="senha" type="password" class="form-control" id="senha"
+                                placeholder="Confirme sua senha">
                         </div>
                         <div class="d-flex justify-content-end">
-                            <a class="btn-laranja btn-grande mr-3" routerLink='/'>Cancelar</a>
-                            <a class="btn-verde btn-verde btn-grande" href="">Atualizar dados</a>
+                            <button type="submit" class="btn btn-primary px-5" (click)='atualizar()'>Cadastrar</button>
+                        </div>
+                        <div class="mt-4 text-center">
+                            <p>Já tem cadastro? <a routerLink='/entrar'>Entrar</a></p>
                         </div>
                     </form>
                 </div>

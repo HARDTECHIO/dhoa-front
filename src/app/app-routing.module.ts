@@ -3,10 +3,17 @@ import { RouterModule, Routes } from '@angular/router';
 import { CadastrarComponent } from './views/cadastrar/cadastrar.component';
 import { EntrarComponent } from './views/entrar/entrar.component';
 import { CategoriasComponent } from './views/principal/categorias/categorias.component';
+<<<<<<< HEAD
 import { DeletarPostagensComponent } from './views/principal/deletar/deletar-postagens/deletar-postagens.component';
 import { EditarPostagensComponent } from './views/principal/editar/editar-postagens/editar-postagens.component';
 import { DeletarCategoriasComponent } from './views/principal/deletar/deletar-categorias/deletar-categorias.component';
 import { EditarCategoriasComponent } from './views/principal/editar/editar-categorias/editar-categorias.component';
+=======
+import { DeletarCategoriasComponent } from './views/principal/deletar/deletar-categorias/deletar-categorias.component';
+import { EditarCategoriasComponent } from './views/principal/editar/editar-categorias/editar-categorias.component';
+import { DeletarPostagensComponent } from './views/principal/deletar/deletar-postagens/deletar-postagens.component';
+import { EditarPostagensComponent } from './views/principal/editar/editar-postagens/editar-postagens.component';
+>>>>>>> d255b9a331899f4c98ad18f2303dbc2a43219ee6
 import { InicioComponent } from './views/principal/inicio/inicio.component';
 import { MinhasPostagensComponent } from './views/principal/minhas-postagens/minhas-postagens.component';
 import { PerfilComponent } from './views/principal/perfil/perfil.component';
@@ -27,10 +34,13 @@ const routes: Routes = [
 
   //Rotas Usuarios ADM
   {path: 'categorias', component: CategoriasComponent},
+<<<<<<< HEAD
 
   
 
 
+=======
+>>>>>>> d255b9a331899f4c98ad18f2303dbc2a43219ee6
   {path: 'categorias/editar/:id', component: EditarCategoriasComponent},
   {path: 'categorias/apagar/:id', component: DeletarCategoriasComponent}
 ];
