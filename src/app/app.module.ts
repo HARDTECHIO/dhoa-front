@@ -17,6 +17,8 @@ import { MinhasPostagensComponent } from './views/principal/minhas-postagens/min
 import { EditarPostagensComponent } from './views/principal/editar/editar-postagens/editar-postagens.component';
 import { DeletarPostagensComponent } from './views/principal/deletar/deletar-postagens/deletar-postagens.component';
 import { CategoriasComponent } from './views/principal/categorias/categorias.component';
+import { EditarCategoriasComponent } from './views/principal/editar/editar-categorias/editar-categorias.component';
+import { DeletarCategoriasComponent } from './views/principal/deletar/deletar-categorias/deletar-categorias.component';
 
 
 @NgModule({
@@ -33,7 +35,9 @@ import { CategoriasComponent } from './views/principal/categorias/categorias.com
     MinhasPostagensComponent,
     EditarPostagensComponent,
     DeletarPostagensComponent,
-    CategoriasComponent
+    CategoriasComponent,
+    EditarCategoriasComponent,
+    DeletarCategoriasComponent
   ],
   imports: [
     BrowserModule,

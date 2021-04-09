@@ -5,6 +5,8 @@ import { EntrarComponent } from './views/entrar/entrar.component';
 import { CategoriasComponent } from './views/principal/categorias/categorias.component';
 import { DeletarPostagensComponent } from './views/principal/deletar/deletar-postagens/deletar-postagens.component';
 import { EditarPostagensComponent } from './views/principal/editar/editar-postagens/editar-postagens.component';
+import { DeletarCategoriasComponent } from './views/principal/deletar/deletar-categorias/deletar-categorias.component';
+import { EditarCategoriasComponent } from './views/principal/editar/editar-categorias/editar-categorias.component';
 import { InicioComponent } from './views/principal/inicio/inicio.component';
 import { MinhasPostagensComponent } from './views/principal/minhas-postagens/minhas-postagens.component';
 import { PerfilComponent } from './views/principal/perfil/perfil.component';
@@ -29,6 +31,8 @@ const routes: Routes = [
   
 
 
+  {path: 'categorias/editar/:id', component: EditarCategoriasComponent},
+  {path: 'categorias/apagar/:id', component: DeletarCategoriasComponent}
 ];
 
 @NgModule({
