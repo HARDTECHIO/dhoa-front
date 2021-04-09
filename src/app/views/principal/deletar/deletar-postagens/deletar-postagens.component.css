@@ -1,0 +1,62 @@
+.btn-verde {
+    text-decoration: none;
+    border: 2px solid #069a92;
+    padding: 0.375rem 0.75rem;
+    border-radius: 50px;
+    width: 130px;
+    height: 40px;
+    text-align: center;
+    line-height: 24px;
+    font-size: 14px;
+    color: #fff !important;
+    background-color: #069a92;
+    transition: 0.3s background-color linear;
+  }
+  
+  .btn-verde:hover {
+    background-color: #03817b;
+    color: #fff !important;
+  }
+  
+  .btn-transparente {
+    text-decoration: none;
+    border: 2px solid #069a92;
+    padding: 0.375rem 0.75rem;
+    border-radius: 50px;
+    width: 130px;
+    height: 40px;
+    text-align: center;
+    line-height: 24px;
+    font-size: 14px;
+    color: #069a92 !important;
+    transition: 0.3s background-color linear;
+  }
+  
+  .btn-transparente:hover {
+    background-color: #069a92;
+    color: #fff !important;
+  }
+  
+  .btn-laranja {
+    text-decoration: none;
+    border: 2px solid #f4805d;
+    padding: 0.375rem 0.75rem;
+    border-radius: 50px;
+    text-align: center;
+    color: #fff !important;
+    background-color: #f4805d;
+    transition: 0.3s background-color linear;
+  }
+  
+  .btn-laranja:hover {
+    background-color: #f36c43;
+    color: #fff !important;
+  }
+
+  .btn-grande {
+    width: 130px;
+    height: 40px;
+    line-height: 24px;
+    font-size: 14px;
+  }
+  

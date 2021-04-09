@@ -8,18 +8,18 @@
     </div>
     <div class="row mb-3">
         <div class="col-md">
-            <h4 class="text-center text-secondary">Você tem certeza que deseja apagar essa postagem?</h4>
+            <h4 class="text-center text-secondary">Você tem certeza que deseja apagar a seguinte postagem?</h4>
         </div>
     </div>
     <div class="row">
         <div class="col-md">
-            <h5 class="text-center text-info">Postagem: {{postagem.texto}}</h5>
+            <h5 class="text-center text-info mb-3">{{postagem.texto}}</h5>
         </div>
     </div>
     <div class="row">
         <div class="col-md d-flex justify-content-center">
-            <a routerLink='/minhas-postagens' class="btn btn-danger mr-3">Não</a>
-            <a (click)="apagar()" class="btn btn-success">Sim</a>
+            <a routerLink='/minhas-postagens' class="btn-laranja btn-grande mr-3">Não</a>
+            <a (click)="apagar()" class="btn-verde btn-grande">Sim</a>
         </div>
     </div>
 </div>
