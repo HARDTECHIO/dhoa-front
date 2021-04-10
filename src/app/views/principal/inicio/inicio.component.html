@@ -10,8 +10,8 @@
             </div>
             <div class="row justify-content-center">
                 <div class="col-md-8 d-flex justify-content-center">
-                    <a data-toggle="modal" data-target="#pedirAjuda" class="btn-transparente mr-3">Pedir Ajuda</a>
-                    <a data-toggle="modal" data-target="#oferecerAjuda" href="" class="btn-verde">Oferecer
+                    <a data-toggle="modal" data-target="#pedirAjuda" class="btn-transparente btn-grande mr-3 px-5">Pedir Ajuda</a>
+                    <a data-toggle="modal" data-target="#oferecerAjuda" href="" class="btn-verde btn-grande px-5">Oferecer
                         Ajuda</a>
                 </div>
             </div>
@@ -27,7 +27,7 @@
         <div class="col-md-3 mr-3">
             <!-- filtros -->
             <div class="row">
-                <div class="col-md bg-secondary p-4">
+                <div class="col-md p-4">
                     <div class="row">
                         <div class="col-md">
                             <h5>Filtros</h5>
@@ -36,37 +36,19 @@
                     <div class="row mb-3">
                         <!-- tipo postagem -->
                         <div class="col-md">
+                            <a class="btn-transparente btn-grande d-block my-2">Ver todas as publicações</a>
                             <p class="m-0">Tipo de Publicação</p>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                                <label class="form-check-label" for="defaultCheck1">
-                                    Oferecendo Ajuda
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                                <label class="form-check-label" for="defaultCheck1">
-                                    Pedindo Ajuda
-                                </label>
-                            </div>
+                            <a (click)="filtrarTipo('pedindo')" class="btn-transparente btn-grande d-block my-2">Pedindo ajuda</a>
+                            <a (click)="filtrarTipo('oferecendo')" class="btn-transparente btn-grande d-block my-2">Oferecendo ajuda</a>
                         </div>
                     </div><!-- /tipo postagem -->
 
                     <!-- temas/categorias -->
                     <div class="row">
                         <div class="col-md">
-                            <p class="m-0">Temas</p>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                                <label class="form-check-label" for="defaultCheck1">
-                                    Produtos
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                                <label class="form-check-label" for="defaultCheck1">
-                                    Voluntariado
-                                </label>
+                            <p class="m-0">Categorias</p>
+                            <div *ngFor="let categoria of categorias">
+                                <a (click)='filtrarCategoria(categoria.id)' class="btn-transparente btn-grande d-block my-2">{{categoria.nome}}</a>
                             </div>
                         </div>
                     </div>
@@ -84,7 +66,7 @@
                     <div class="row mb-3">
                         <!-- foto usuario e título -->
                         <div class="col-md d-flex align-items-center">
-                            <img class="rounded-circle img-fluid" src="{{postagem.usuario.imagemUrl}}"
+                            <img class="rounded-circle" src="{{postagem.usuario.imagemUrl}}"
                                 alt="{{postagem.usuario.nome}}" width="50px" height="50px">
                             <p class="px-2 m-0 ">{{postagem.usuario.nome}} - Está <span class="cap">{{postagem.tipoPostagem}}</span> Ajuda <br> {{postagem.dataPostagem | dateAgo}} <i class="far fa-clock"></i>
                         </div>
