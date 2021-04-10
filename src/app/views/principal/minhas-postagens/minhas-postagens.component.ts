@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Categoria } from 'src/app/models/Categoria';
+import { Postagem } from 'src/app/models/Postagem';
 import { Usuario } from 'src/app/models/Usuario';
 import { AuthService } from 'src/app/service/auth.service';
 import { CategoriaService } from 'src/app/service/categoria.service';
@@ -12,9 +14,14 @@ import { environment } from 'src/environments/environment.prod';
   styleUrls: ['./minhas-postagens.component.css'],
 })
 export class MinhasPostagensComponent implements OnInit {
+  
+  postagens: Postagem[]
 
   usuario: Usuario = new Usuario()
   idUsuario = environment.id
+
+  categorias: Categoria[]
+  
   constructor(
     private router: Router,
     private postagemService: PostagemService,
@@ -35,6 +42,17 @@ export class MinhasPostagensComponent implements OnInit {
     })
   }
 
+  filtrarTipo(tipo: string) {
+    this.postagemService.findAllByTipo(tipo).subscribe((resp: Postagem[]) => {
+      this.postagens = resp
+    })
+  }
+
+  filtrarCategoria(id: number) {
+    this.postagemService.findAllByCategoriaId(id).subscribe((resp: Postagem[]) => {
+      this.postagens = resp
+    })
+  }
   
 
 }

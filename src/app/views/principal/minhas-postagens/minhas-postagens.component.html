@@ -5,53 +5,43 @@
             <h1 class="text-center">Editar minhas postagens</h1>
         </div>
     </div>
+
+
+    <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-3 mr-3"> <!-- filtros -->
+        <div class="col-md-3 mr-3">
+            <!-- filtros -->
             <div class="row">
-                <div class="col-md bg-secondary p-4">
+                <div class="col-md p-4">
                     <div class="row">
                         <div class="col-md">
                             <h5>Filtros</h5>
                         </div>
                     </div>
-                    <div class="row mb-3"><!-- tipo postagem -->
+                    <div class="row mb-3">
+                        <!-- tipo postagem -->
                         <div class="col-md">
+                            <a class="btn-transparente btn-grande d-block my-2">Ver todas as publicações</a>
                             <p class="m-0">Tipo de Publicação</p>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                                <label class="form-check-label" for="defaultCheck1">
-                                  Oferecendo Ajuda
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                                <label class="form-check-label" for="defaultCheck1">
-                                  Pedindo Ajuda
-                                </label>
-                            </div>
+                            <a (click)="filtrarTipo('pedindo')" class="btn-transparente btn-grande d-block my-2">Pedindo ajuda</a>
+                            <a (click)="filtrarTipo('oferecendo')" class="btn-transparente btn-grande d-block my-2">Oferecendo ajuda</a>
                         </div>
                     </div><!-- /tipo postagem -->
-        
-                    <div class="row"><!-- temas/categorias -->
+
+                    <!-- temas/categorias -->
+                    <div class="row">
                         <div class="col-md">
-                            <p class="m-0">Temas</p>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                                <label class="form-check-label" for="defaultCheck1">
-                                  Produtos
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                                <label class="form-check-label" for="defaultCheck1">
-                                  Voluntariado
-                                </label>
+                            <p class="m-0">Categorias</p>
+                            <div *ngFor="let categoria of categorias">
+                                <a (click)='filtrarCategoria(categoria.id)' class="btn-transparente btn-grande d-block my-2">{{categoria.nome}}</a>
                             </div>
                         </div>
-                    </div><!-- /temas/categorias -->
+                    </div>
+                    <!-- /temas/categorias -->
                 </div>
             </div>
-        </div> <!-- /filtros -->
+        </div> 
+        <!-- /filtros -->
 
         <!-- itens do feed -->
         <div class="col-md-5">
