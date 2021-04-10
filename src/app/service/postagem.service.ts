@@ -27,6 +27,16 @@ export class PostagemService {
     return this.http.get<Postagem[]>(url, this.token)
   }
 
+  findAllByCategoriaId(categoriaId: number): Observable<Postagem[]> {
+    const url = this.baseUrl + `/postagens/categoria/${categoriaId}`
+    return this.http.get<Postagem[]>(url, this.token)
+  }
+
+  findAllByTipo(tipo: string): Observable<Postagem[]> {
+    const url = this.baseUrl + `/postagens/tipo/${tipo}`
+    return this.http.get<Postagem[]>(url, this.token)
+  }
+
   findById(id: number): Observable<Postagem>{
     const url = this.baseUrl + `/postagens/${id}`
     return this.http.get<Postagem>(url,this.token)

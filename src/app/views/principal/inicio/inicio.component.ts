@@ -82,4 +82,16 @@ export class InicioComponent implements OnInit {
       this.categoria = resp
     })
   }
+
+  filtrarTipo(tipo: string) {
+    this.postagemService.findAllByTipo(tipo).subscribe((resp: Postagem[]) => {
+      this.postagens = resp
+    })
+  }
+
+  filtrarCategoria(id: number) {
+    this.postagemService.findAllByCategoriaId(id).subscribe((resp: Postagem[]) => {
+      this.postagens = resp
+    })
+  }
 }
