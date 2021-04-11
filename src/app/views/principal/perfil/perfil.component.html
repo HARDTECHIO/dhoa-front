@@ -18,27 +18,27 @@
                         <form>
                             <div class="form-group">
                                 <label for="nome">Nome</label>
-                                <input [(ngModel)]='usuario.nome' name="nome" type="text" class="form-control" id="nome"
+                                <input [(ngModel)]='usuario.nome' (keyup)='validaNome($event)' name="nome" type="text" class="form-control" id="nome"
                                     placeholder="Insira seu nome">
                             </div>
                             <div class="form-group">
                                 <label for="email">E-mail</label>
-                                <input [(ngModel)]='usuario.email' name="email" type="text" class="form-control"
+                                <input [(ngModel)]='usuario.email' (keyup)='validaEmail($event)' name="email" type="text" class="form-control"
                                     id="email" placeholder="Insira seu email">
                             </div>
                             <div class="form-group">
                                 <label for="linkFoto">Link da foto</label>
-                                <input [(ngModel)]='usuario.imagemUrl' name="foto" type="url" class="form-control"
+                                <input [(ngModel)]='usuario.imagemUrl' (keyup)='validaImagemUrl($event)' name="foto" type="url" class="form-control"
                                     id="linkFoto" placeholder="Insira o link da sua foto">
                             </div>
                             <div class="form-group">
                                 <label for="senha">Senha</label>
-                                <input (input)='confirmSenha($event)' name="senhaConfirmacao" type="password"
+                                <input (input)='confirmSenha($event)' (keyup)='validaSenha($event)' name="senhaConfirmacao" type="password"
                                     class="form-control" id="senhaConfirmacao" placeholder="Insira sua senha">
                             </div>
                             <div class="form-group">
                                 <label for="senhaConfirmacao">Confirmar Senha</label>
-                                <input [(ngModel)]='usuario.senha' name="senha" type="password" class="form-control"
+                                <input [(ngModel)]='usuario.senha' (keyup)='validaConfirmaSenha($event)' name="senha" type="password" class="form-control"
                                     id="senha" placeholder="Confirme sua senha">
                             </div>
                             <div class="row mt-2 mb-5">

@@ -24,7 +24,7 @@ export class InicioComponent implements OnInit {
 
   categoria: Categoria = new Categoria()
   categorias: Categoria[]
-  idCategoria: number 
+  idCategoria: number
 
   constructor(
     private router: Router,
@@ -32,7 +32,7 @@ export class InicioComponent implements OnInit {
     private authService: AuthService,
     private categoriaService: CategoriaService
   ) { }
-  ngOnInit()  { 
+  ngOnInit() {
     this.listarPostagens()
     this.listarCategorias()
     console.log(this.listarPostagens())
@@ -45,7 +45,7 @@ export class InicioComponent implements OnInit {
   }
 
   publicar() {
-    this.categoria.id = this.idCategoria 
+    this.categoria.id = this.idCategoria
     this.postagem.categoria = this.categoria
 
     this.usuario.id = this.idUsuario
@@ -64,11 +64,11 @@ export class InicioComponent implements OnInit {
   }
   findByIdUser() {
     this.authService.findById(this.idUsuario).subscribe((resp: Usuario) => {
-      this.usuario = resp 
+      this.usuario = resp
     })
   }
 
-  verificaTipoPostagem(event:any) {
+  verificaTipoPostagem(event: any) {
     this.postagem.tipoPostagem = event.target.value
   }
 
@@ -89,9 +89,12 @@ export class InicioComponent implements OnInit {
     })
   }
 
-  filtrarCategoria(id: number) {
+  filtrarCategoria(id: number, nome: string) {
     this.postagemService.findAllByCategoriaId(id).subscribe((resp: Postagem[]) => {
       this.postagens = resp
+
+      let btn = document.querySelector('#' + nome)
+      btn?.classList.add('btn-verde-ativo')
     })
   }
 }

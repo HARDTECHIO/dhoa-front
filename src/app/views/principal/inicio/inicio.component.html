@@ -36,7 +36,7 @@
                     <div class="row mb-3">
                         <!-- tipo postagem -->
                         <div class="col-md">
-                            <a class="btn-transparente btn-grande d-block my-2">Ver todas as publicações</a>
+                            <a (click)='listarPostagens()' class="btn-transparente btn-grande d-block my-2">Ver todas as publicações</a>
                             <p class="m-0">Tipo de Publicação</p>
                             <a (click)="filtrarTipo('pedindo')" class="btn-transparente btn-grande d-block my-2">Pedindo ajuda</a>
                             <a (click)="filtrarTipo('oferecendo')" class="btn-transparente btn-grande d-block my-2">Oferecendo ajuda</a>
@@ -48,7 +48,7 @@
                         <div class="col-md">
                             <p class="m-0">Categorias</p>
                             <div *ngFor="let categoria of categorias">
-                                <a (click)='filtrarCategoria(categoria.id)' class="btn-transparente btn-grande d-block my-2">{{categoria.nome}}</a>
+                                <a (click)='filtrarCategoria(categoria.id, categoria.nome)' id="{{categoria.nome}}" class="btn-transparente btn-grande d-block my-2 btn-filtro">{{categoria.nome}}</a>
                             </div>
                         </div>
                     </div>

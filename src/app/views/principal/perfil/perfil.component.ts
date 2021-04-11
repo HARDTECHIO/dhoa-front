@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Usuario } from 'src/app/models/Usuario';
 import { AuthService } from 'src/app/service/auth.service';
 import { environment } from 'src/environments/environment.prod';
+import Swal from 'sweetalert2'
 
 @Component({
   selector: 'app-perfil',
@@ -15,6 +16,13 @@ export class PerfilComponent implements OnInit {
   idUsuario = environment.id
   confirmarSenha: string
 
+  // Variável de validação
+  nomeValido = true
+  emailValido = true
+  imagemUrlValida = true
+  senhaValida = true
+  confirmaSenha = true
+
   constructor(
     private authService: AuthService,
     private route: ActivatedRoute,
@@ -26,13 +34,55 @@ export class PerfilComponent implements OnInit {
     this.getUsuario(this.idUsuario)
   }
 
+  validaNome(event: any) {
+    this.nomeValido = this.validar(event.target.value.length < 2 || event.target.value.length > 100, event)
+  }
+
+  validaEmail(event: any) {
+    this.emailValido = this.validar(event.target.value.indexOf('@') == -1 || event.target.value.indexOf('.') == -1, event)
+  }
+
+  validaSenha(event: any) {
+    this.senhaValida = this.validar(event.target.value.length < 5 || event.target.value.length > 255, event)
+  }
+
+  validaConfirmaSenha(event: any) {
+    this.confirmaSenha = this.validar(event.target.value.length < 5 || event.target.value.length > 255, event)
+  }
+
+  validaImagemUrl(event: any) {
+    this.imagemUrlValida = this.validar(event.target.value.length < 0 || event.target.value.length > 255, event)
+  }
+
+  validar(condicao: boolean, event: any) {
+    let valido = false
+    if (condicao) {
+      event.target.classList.remove("is-valid")
+      event.target.classList.add("is-invalid")
+    } else {
+      event.target.classList.remove("is-invalid")
+      event.target.classList.add("is-valid")
+      valido = true
+    }
+    return valido
+  }
+
   atualizar(){
-    if(this.usuario.senha != this.confirmarSenha){
-      alert('As senhas estão incorretas!!!')
-    }else{
+    if(!this.nomeValido || !this.emailValido || !this.senhaValida || !this.confirmaSenha || !this.imagemUrlValida || this.senhaValida != this.confirmaSenha){
+      Swal.fire({
+        icon: 'error',
+        title: 'Ocorreu um erro',
+        text: 'Preencha os campos corretamente'
+      })
+    } else{
       this.authService.update(this.usuario).subscribe((resp: Usuario)=>{
         this.usuario = resp
-        alert('Usuário atualizado com sucesso! Entre novamente!')
+        Swal.fire({
+          icon: 'success',
+          title: 'Muito bom',
+          text: 'Usuário atualizado com sucesso! Entre novamente!',
+          timer: 1500
+        })
         this.clearEnv()
         this.router.navigate(['/entrar'])
       })

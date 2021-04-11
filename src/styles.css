@@ -17,6 +17,7 @@ html {
   transition: 0.3s background-color linear;
 }
 
+
 .btn-verde:hover {
   background-color: #03817b;
   color: #fff !important;
@@ -34,6 +35,11 @@ html {
   font-size: 14px;
   color: #069a92 !important;
   transition: 0.3s background-color linear;
+}
+
+.btn-verde-ativo {
+  background-color: #069a92;
+  color: #fff !important;
 }
 
 .btn-transparente:hover {
