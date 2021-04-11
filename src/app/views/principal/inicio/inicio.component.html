@@ -11,14 +11,13 @@
             <div class="row justify-content-center">
                 <div class="col-md-8 d-flex justify-content-center">
                     <a data-toggle="modal" data-target="#pedirAjuda" class="btn-transparente btn-grande mr-3 px-5">Pedir Ajuda</a>
-                    <a data-toggle="modal" data-target="#oferecerAjuda" href="" class="btn-verde btn-grande px-5">Oferecer
+                    <a data-toggle="modal" data-target="#oferecerAjuda" class="btn-verde btn-grande px-5">Oferecer
                         Ajuda</a>
                 </div>
             </div>
         </div>
         <div class="col-md d-flex justify-content-center">
-            <img src="../../../../assets/img/bg-social.png" alt="Pessoas muito loucas" width="100%">
-        </div>
+            <img src="../../../../assets/img/bg-social.png" alt="Pessoas muito loucas" width="100%">        </div>
     </div>
 </div>
 
@@ -36,10 +35,10 @@
                     <div class="row mb-3">
                         <!-- tipo postagem -->
                         <div class="col-md">
-                            <a (click)='listarPostagens()' class="btn-transparente btn-grande d-block my-2">Ver todas as publicações</a>
+                            <a (click)='filtrarPostagens()' id="todasPostagens" class="btn-transparente btn-grande d-block my-2">Ver todas as publicações</a>
                             <p class="m-0">Tipo de Publicação</p>
-                            <a (click)="filtrarTipo('pedindo')" class="btn-transparente btn-grande d-block my-2">Pedindo ajuda</a>
-                            <a (click)="filtrarTipo('oferecendo')" class="btn-transparente btn-grande d-block my-2">Oferecendo ajuda</a>
+                            <a (click)="filtrarTipo('pedindo')" id="pedindo" class="btn-transparente btn-grande d-block my-2">Pedindo ajuda</a>
+                            <a (click)="filtrarTipo('oferecendo')" id="oferecendo" class="btn-transparente btn-grande d-block my-2">Oferecendo ajuda</a>
                         </div>
                     </div><!-- /tipo postagem -->
 
@@ -59,8 +58,8 @@
         <!-- /filtros -->
 
         <!-- itens do feed -->
-        <div class="col-md-5">
-            <div *ngFor="let postagem of postagens" class="row shadow p-2 mb-3">
+        <div class="col-md-6">
+            <div *ngFor="let postagem of postagens" class="row p-2 mb-3 item-feed">
                 <!-- item do feed -->
                 <div class="col-md">
                     <div class="row mb-3">
@@ -68,7 +67,7 @@
                         <div class="col-md d-flex align-items-center">
                             <img class="rounded-circle" src="{{postagem.usuario.imagemUrl}}"
                                 alt="{{postagem.usuario.nome}}" width="50px" height="50px">
-                            <p class="px-2 m-0 ">{{postagem.usuario.nome}} - Está <span class="cap">{{postagem.tipoPostagem}}</span> Ajuda <br> {{postagem.dataPostagem | dateAgo}} <i class="far fa-clock"></i>
+                            <p class="px-2 m-0 text-secondary"><span style="color: #212121;">{{postagem.usuario.nome}}</span> - Está <span class="cap">{{postagem.tipoPostagem}}</span> Ajuda <br> {{postagem.dataPostagem | dateAgo}} <i class="far fa-clock"></i>
                         </div>
                     </div><!-- /foto usuario e título -->
                     <div class="row">
@@ -79,8 +78,8 @@
                     </div><!-- /texto -->
                     <div class="row">
                         <!-- foto publicação -->
-                        <div class="col-md">
-                            <img src="{{postagem.imagemUrl}}" alt="{{postagem.usuario.nome}} - Está <span class='cap'>{{postagem.tipoPostagem}}</span> ajuda" width="100%">
+                        <div class="col-md" *ngIf="verificaImagem(postagem.imagemUrl)">
+                            <img src="{{postagem.imagemUrl}}" width="100%">
                         </div>
                     </div><!-- /foto publicação -->
                     <div class="row pt-2">
@@ -108,7 +107,7 @@
             <div class="modal-body">
                 <div class="form-group">
                     <label for="tipoPostagem">Oferecendo ou Pedindo Ajuda</label>
-                    <select (change)="verificaTipoPostagem($event)" class="form-control" name="tipoPostagem">
+                    <select id="tipoPostagem" class="form-control" name="tipoPostagem">
                         <option value="oferecendo">Oferecendo Ajuda</option>
                         <option value="pedindo" selected>Pedindo Ajuda</option>
                     </select>
@@ -151,7 +150,7 @@
             <div class="modal-body">
                 <div class="form-group">
                     <label for="tipoPostagem">Oferecendo ou Pedindo Ajuda</label>
-                    <select (change)="verificaTipoPostagem($event)" class="form-control" name="tipoPostagem">
+                    <select class="form-control" name="tipoPostagem">
                         <option value="oferecendo" selected>Oferecendo Ajuda</option>
                         <option value="pedindo">Pedindo Ajuda</option>
                     </select>
