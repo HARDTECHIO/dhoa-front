@@ -106,15 +106,15 @@
             </div>
             <div class="modal-body">
                 <div class="form-group">
-                    <label for="tipoPostagem">Oferecendo ou Pedindo Ajuda</label>
-                    <select id="tipoPostagem" class="form-control" name="tipoPostagem">
+                    <label for="tipoPostagemP">Oferecendo ou Pedindo Ajuda</label>
+                    <select id="tipoPostagemP" class="form-control" name="tipoPostagemP">
                         <option value="oferecendo">Oferecendo Ajuda</option>
                         <option value="pedindo" selected>Pedindo Ajuda</option>
                     </select>
                 </div>
                 <div class="form-group">
                     <label for="texto">Descrição</label>
-                    <textarea [(ngModel)]="postagem.texto" class="form-control" id="texto"
+                    <textarea [(ngModel)]="postagem.texto" (keyup)='validaTexto($event)' class="form-control" id="texto"
                         placeholder="Descreva seu pedido ou oferta"></textarea>
                 </div>
                 <div class="form-group">
@@ -124,14 +124,14 @@
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="imagemUrl">Imagem</label>
-                    <input [(ngModel)]="postagem.imagemUrl" class="form-control" type="text" name="imagemUrl" id="imagemUrl"
+                    <label for="imagemUrlP">Imagem</label>
+                    <input [(ngModel)]="postagem.imagemUrl" (keyup)='validaImagem($event)' class="form-control" type="text" name="imagemUrlP" id="imagemUrlP"
                         placeholder="Informe a URL da Foto">
                 </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn-laranja" data-dismiss="modal">Cancelar</button>
-                <button (click)="publicar()" type="button" class="btn-verde" data-dismiss="modal">Publicar</button>
+                <button (click)="publicarP()" type="button" class="btn-verde" data-dismiss="modal">Publicar</button>
             </div>
         </div>
     </div>
@@ -149,15 +149,15 @@
             </div>
             <div class="modal-body">
                 <div class="form-group">
-                    <label for="tipoPostagem">Oferecendo ou Pedindo Ajuda</label>
-                    <select class="form-control" name="tipoPostagem">
+                    <label for="tipoPostagemO">Oferecendo ou Pedindo Ajuda</label>
+                    <select id="tipoPostagemO" class="form-control" name="tipoPostagemO">
                         <option value="oferecendo" selected>Oferecendo Ajuda</option>
                         <option value="pedindo">Pedindo Ajuda</option>
                     </select>
                 </div>
                 <div class="form-group">
                     <label for="texto">Descrição</label>
-                    <textarea [(ngModel)]="postagem.texto" class="form-control" id="texto"
+                    <textarea [(ngModel)]="postagem.texto" (keyup)='validaTexto($event)' class="form-control" id="texto"
                         placeholder="Descreva seu pedido ou oferta"></textarea>
                 </div>
                 <div class="form-group">
@@ -167,14 +167,14 @@
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="imagemUrl">Imagem</label>
-                    <input [(ngModel)]="postagem.imagemUrl" class="form-control" type="text" name="imagemUrl" id="imagemUrl"
+                    <label for="imagemUrlO">Imagem</label>
+                    <input [(ngModel)]="postagem.imagemUrl" (keyup)='validaImagem($event)' class="form-control" type="text" name="imagemUrlO" id="imagemUrlO"
                         placeholder="Informe a URL da Foto">
                 </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn-laranja" data-dismiss="modal">Cancelar</button>
-                <button (click)="publicar()" type="button" class="btn-verde" data-dismiss="modal">Publicar</button>
+                <button (click)="publicarO()" type="button" class="btn-verde" data-dismiss="modal">Publicar</button>
             </div>
         </div>
     </div>
