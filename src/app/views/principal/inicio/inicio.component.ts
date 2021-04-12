@@ -28,6 +28,11 @@ export class InicioComponent implements OnInit {
 
   tipos = 'pedindo oferecendo'
 
+  key = 'dataPostagem'
+  reverse = true
+
+
+
   constructor(
     private router: Router,
     private postagemService: PostagemService,

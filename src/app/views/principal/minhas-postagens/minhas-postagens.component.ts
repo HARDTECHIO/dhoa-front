@@ -21,6 +21,9 @@ export class MinhasPostagensComponent implements OnInit {
   idUsuario = environment.id
 
   categorias: Categoria[]
+
+  key = 'dataPostagem'
+  reverse = true 
   
   constructor(
     private router: Router,

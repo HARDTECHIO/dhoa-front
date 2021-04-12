@@ -21,6 +21,7 @@ import { CategoriasComponent } from './views/principal/categorias/categorias.com
 import { EditarCategoriasComponent } from './views/principal/editar/editar-categorias/editar-categorias.component';
 import { DeletarCategoriasComponent } from './views/principal/deletar/deletar-categorias/deletar-categorias.component';
 import { DateAgoPipe } from './pipes/date-ago.pipe';
+import { OrderModule } from 'ngx-order-pipe';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,9 @@ import { DateAgoPipe } from './pipes/date-ago.pipe';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    OrderModule
+    
   ],
   providers: [{
     provide: LocationStrategy,

@@ -59,7 +59,7 @@
 
         <!-- itens do feed -->
         <div class="col-md-6">
-            <div *ngFor="let postagem of postagens" class="row p-2 mb-3 item-feed">
+            <div *ngFor='let postagem of postagens | orderBy : key : reverse' class="row p-2 mb-3 item-feed">
                 <!-- item do feed -->
                 <div class="col-md">
                     <div class="row mb-3">
