@@ -8,74 +8,86 @@
 
 
     <div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-3 mr-3">
-            <!-- filtros -->
-            <div class="row">
-                <div class="col-md p-4">
-                    <div class="row">
-                        <div class="col-md">
-                            <h5>Filtros</h5>
+        <div class="row justify-content-center">
+            <div class="col-md-3 mr-3">
+                <!-- filtros -->
+                <div class="row">
+                    <div class="col-md p-4">
+                        <div class="row">
+                            <div class="col-md">
+                                <h5>Filtros</h5>
+                            </div>
                         </div>
-                    </div>
-                    <div class="row mb-3">
-                        <!-- tipo postagem -->
-                        <div class="col-md">
-                            <a class="btn-transparente btn-grande d-block my-2">Ver todas as publicações</a>
-                            <p class="m-0">Tipo de Publicação</p>
-                            <a (click)="filtrarTipo('pedindo')" class="btn-transparente btn-grande d-block my-2">Pedindo ajuda</a>
-                            <a (click)="filtrarTipo('oferecendo')" class="btn-transparente btn-grande d-block my-2">Oferecendo ajuda</a>
-                        </div>
-                    </div><!-- /tipo postagem -->
+                        <div class="row mb-3">
+                            <!-- tipo postagem -->
+                            <div class="col-md">
+                                <a class="btn-transparente btn-grande d-block my-2">Ver todas as publicações</a>
+                                <p class="m-0">Tipo de Publicação</p>
+                                <a (click)="filtrarTipo('pedindo')"
+                                    class="btn-transparente btn-grande d-block my-2">Pedindo ajuda</a>
+                                <a (click)="filtrarTipo('oferecendo')"
+                                    class="btn-transparente btn-grande d-block my-2">Oferecendo ajuda</a>
+                            </div>
+                        </div><!-- /tipo postagem -->
 
-                    <!-- temas/categorias -->
-                    <div class="row">
-                        <div class="col-md">
-                            <p class="m-0">Categorias</p>
-                            <div *ngFor="let categoria of categorias">
-                                <a (click)='filtrarCategoria(categoria.id)' class="btn-transparente btn-grande d-block my-2">{{categoria.nome}}</a>
+                        <!-- temas/categorias -->
+                        <div class="row">
+                            <div class="col-md">
+                                <p class="m-0">Categorias</p>
+                                <div *ngFor="let categoria of categorias">
+                                    <a (click)='filtrarCategoria(categoria.id)'
+                                        class="btn-transparente btn-grande d-block my-2">{{categoria.nome}}</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /temas/categorias -->
+                    </div>
+                </div>
+            </div>
+            <!-- /filtros -->
+
+            <!-- itens do feed -->
+            <div class="col-md-6">
+                <div class="row shadow p-2 mb-3" *ngFor='let postagem of usuario.postagens | orderBy : key : reverse'>
+                    <!-- item do feed -->
+                    <div class="col-md">
+                        <div class="row mb-3">
+                            <!-- foto usuario e título -->
+                            <div class="col-md d-flex align-items-center">
+                                <img class="rounded-circle img-fluid" src="{{postagem.usuario.imagemUrl}}"
+                                    alt="{{postagem.usuario.nome}}" width="50px">
+                                <p class="px-2 m-0">{{postagem.usuario.nome}} - Está <span
+                                        class="cap">{{postagem.tipoPostagem}}</span> Ajuda <br> {{postagem.dataPostagem
+                                    | dateAgo}} <i class="far fa-clock"></i>
+                            </div>
+                        </div><!-- /foto usuario e título -->
+                        <div class="row">
+                            <!-- texto -->
+                            <div class="col-md">
+                                <p>{{postagem.texto}}</p>
+                            </div>
+                        </div><!-- /texto -->
+                        <div class="row">
+                            <!-- foto publicação -->
+                            <div class="col-md">
+                                <img src="{{postagem.imagemUrl}}"
+                                    alt="{{postagem.usuario.nome}}-Está <span class='cap'>{{postagem.tipoPostagem}}</span> ajuda"
+                                    width="100%">
+                            </div>
+                        </div><!-- /foto publicação -->
+                        <div class="row pt-2">
+                            <div class="col-md d-flex justify-content-end align-items-center">
+                                <a class="btn-verde mr-3" [routerLink]="['/postagem/apagar/',postagem.id]">Apagar</a>
+                                <a class="btn-verde" [routerLink]="['/postagem/editar/',postagem.id]">Editar </a>
                             </div>
                         </div>
                     </div>
-                    <!-- /temas/categorias -->
-                </div>
+                </div><!-- /item do feed -->
             </div>
-        </div> 
-        <!-- /filtros -->
-
-        <!-- itens do feed -->
-        <div class="col-md-6">
-            <div class="row shadow p-2 mb-3" *ngFor="let postagem of usuario.postagens" ><!-- item do feed -->
-                <div class="col-md">
-                    <div class="row mb-3"><!-- foto usuario e título -->
-                        <div class="col-md d-flex align-items-center">
-                            <img class="rounded-circle img-fluid" src="{{postagem.usuario.imagemUrl}}" alt="{{postagem.usuario.nome}}" width="50px">
-                            <p class="px-2 m-0">{{postagem.usuario.nome}} - Está <span class="cap">{{postagem.tipoPostagem}}</span> Ajuda <br> {{postagem.dataPostagem | dateAgo}} <i class="far fa-clock"></i>
-                        </div>
-                    </div><!-- /foto usuario e título -->
-                    <div class="row"><!-- texto -->
-                        <div class="col-md">
-                            <p>{{postagem.texto}}</p>
-                        </div>
-                    </div><!-- /texto -->
-                    <div class="row"><!-- foto publicação -->
-                        <div class="col-md">
-                            <img src="{{postagem.imagemUrl}}" alt="{{postagem.usuario.nome}}-Está <span class='cap'>{{postagem.tipoPostagem}}</span> ajuda" width="100%">
-                        </div>
-                    </div><!-- /foto publicação -->
-                    <div class="row pt-2">
-                        <div class="col-md d-flex justify-content-end align-items-center">
-                            <a class="btn-verde mr-3" [routerLink]="['/postagem/apagar/',postagem.id]">Apagar</a>
-                            <a class="btn-verde" [routerLink]="['/postagem/editar/',postagem.id]">Editar </a>
-                        </div>
-                    </div>
-                </div>
-            </div><!-- /item do feed -->
         </div>
     </div>
-</div>
 
-<!-- Modal Editar Postagem -->
+    <!-- Modal Editar Postagem -->
 
 
-<app-rodape></app-rodape>
+    <app-rodape></app-rodape>

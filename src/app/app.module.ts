@@ -26,6 +26,7 @@ import { DeletarCategoriasComponent } from './views/principal/deletar/deletar-ca
 import { DateAgoPipe } from './pipes/date-ago.pipe';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,

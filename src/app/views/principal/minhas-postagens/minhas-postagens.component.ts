@@ -22,7 +22,9 @@ export class MinhasPostagensComponent implements OnInit {
 
   categorias: Categoria[]
 
-  
+  key = 'dataPostagem'
+  reverse = true
+
 
   constructor(
     private router: Router,
