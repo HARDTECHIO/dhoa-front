@@ -14,14 +14,16 @@ import { environment } from 'src/environments/environment.prod';
   styleUrls: ['./minhas-postagens.component.css'],
 })
 export class MinhasPostagensComponent implements OnInit {
-  
+
   postagens: Postagem[]
 
   usuario: Usuario = new Usuario()
   idUsuario = environment.id
 
   categorias: Categoria[]
+
   
+
   constructor(
     private router: Router,
     private postagemService: PostagemService,
@@ -53,7 +55,7 @@ export class MinhasPostagensComponent implements OnInit {
       this.postagens = resp
     })
   }
-  
+
 
 }
 
