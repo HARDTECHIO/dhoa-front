@@ -22,6 +22,7 @@ export class PostagemService {
     const url = this.baseUrl + '/postagens'
     return this.http.post<Postagem>(url, postagem, this.token)
   }
+  
   findAll(): Observable<Postagem[]> {
     const url = this.baseUrl + '/postagens'
     return this.http.get<Postagem[]>(url, this.token)

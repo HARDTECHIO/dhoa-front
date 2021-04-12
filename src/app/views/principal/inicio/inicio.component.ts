@@ -34,11 +34,11 @@ export class InicioComponent implements OnInit {
 
 
   constructor(
-    private router: Router,
     private postagemService: PostagemService,
     private authService: AuthService,
     private categoriaService: CategoriaService
   ) { }
+
   ngOnInit() {
     this.listarCategorias()
     this.listarPostagens()
@@ -47,8 +47,14 @@ export class InicioComponent implements OnInit {
   listarPostagens() {
     this.postagemService.findAll().subscribe((resp: Postagem[]) => {
       this.postagens = resp
-      let all = document.querySelector('#todasPostagens')
-      all?.classList.add('btn-verde-ativo')
+      // let all = document.querySelector('#todasPostagens')
+      // all?.classList.add('btn-verde-ativo')
+    })
+  }
+
+  listarCategorias() {
+    this.categoriaService.findAll().subscribe((resp: Categoria[]) => {
+      this.categorias = resp
     })
   }
 
@@ -77,11 +83,7 @@ export class InicioComponent implements OnInit {
     })
   }
 
-  listarCategorias() {
-    this.categoriaService.findAll().subscribe((resp: Categoria[]) => {
-      this.categorias = resp
-    })
-  }
+  
   getCategoria() {
     this.categoriaService.findById(this.idCategoria).subscribe((resp: Categoria) => {
       this.categoria = resp

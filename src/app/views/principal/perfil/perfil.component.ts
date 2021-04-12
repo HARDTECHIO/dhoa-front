@@ -68,6 +68,7 @@ export class PerfilComponent implements OnInit {
   }
 
   atualizar(){
+    this.usuario.postagens = []
     if(!this.nomeValido || !this.emailValido || !this.senhaValida || !this.confirmaSenha || !this.imagemUrlValida || this.senhaValida != this.confirmaSenha){
       Swal.fire({
         icon: 'error',
