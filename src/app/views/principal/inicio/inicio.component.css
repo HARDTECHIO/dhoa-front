@@ -1,10 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@700&display=swap');
+#container-inicio-cima {
+  background: rgb(221,221,221);
+  background: linear-gradient(0deg, rgba(221,221,221,221) 0%, rgba(255,255,255,1) 100%);
+}
+#container-inicio {
+  background: rgb(221,221,221);
+}
+
 .titulo-header {
   font-size: 60px;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
   color: #272b44;
 }
 
 .texto-header {
   color: #706c87;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
   font-size: 20px;
 }
 
@@ -17,4 +28,9 @@
   border: 1px solid #bebebe;
   -webkit-box-shadow: 0px 3px 5px 0px #bebebe;
   box-shadow: 0px 3px 5px 0px #bebebe;
+}
+
+#texto-colors {
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  color: #706c87;
 }
