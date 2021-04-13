@@ -1,4 +1,3 @@
-import { ModalModule } from 'ngx-bootstrap/modal';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
@@ -51,8 +50,7 @@ import { DateAgoPipe } from './pipes/date-ago.pipe';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    OrderModule,
-    ModalModule.forRoot()
+    OrderModule
 
   ],
   providers: [{

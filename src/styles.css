@@ -1,6 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@700&display=swap');
 html {
   scroll-behavior: smooth;
+  background: #a8ece8;
+}
+
+h1 {
+  font-size: 60px;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  color: #272b44;
+}
+
+h4 {
+  font-size: 60px;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  color: #272b44;
+}
+
+h5 {
+  font-size: 60px;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  color: #272b44;
 }
 
 .btn-verde {
