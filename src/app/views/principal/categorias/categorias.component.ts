@@ -17,7 +17,7 @@ export class CategoriasComponent implements OnInit {
   // Variável de validação
   categoriaValida = false
   descricaoValida = false
-  iconeValido = false
+  iconeValido = true
 
   constructor(
     private router: Router,
@@ -78,7 +78,6 @@ export class CategoriasComponent implements OnInit {
 
   listar() {
     this.categoriaService.findAll().subscribe((resp: Categoria[]) => {
-      console.log(resp)
       this.categorias = resp
     })
   }
