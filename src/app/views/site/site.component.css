@@ -83,10 +83,10 @@
   color: #069a92;
 }
 
-#container-site-cima {
+.container-site-cima {
   background: rgb(221,221,221);
   background: linear-gradient(0deg, rgba(221,221,221,221) 0%, rgba(255,255,255,1) 100%);
 }
-#container-site {
+.container-site {
   background: rgb(221,221,221);
 }
