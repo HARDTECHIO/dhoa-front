@@ -15,7 +15,7 @@ import Swal from 'sweetalert2';
   styleUrls: ['./minhas-postagens.component.css'],
 })
 export class MinhasPostagensComponent implements OnInit {
-  
+
   postagens: Postagem[]
 
   usuario: Usuario = new Usuario()
@@ -24,8 +24,9 @@ export class MinhasPostagensComponent implements OnInit {
   categorias: Categoria[]
 
   key = 'dataPostagem'
-  reverse = true 
-  
+  reverse = true
+
+
   constructor(
     private router: Router,
     private postagemService: PostagemService,

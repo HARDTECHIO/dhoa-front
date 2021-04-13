@@ -3,6 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { OrderModule } from 'ngx-order-pipe';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -21,7 +23,8 @@ import { CategoriasComponent } from './views/principal/categorias/categorias.com
 import { EditarCategoriasComponent } from './views/principal/editar/editar-categorias/editar-categorias.component';
 import { DeletarCategoriasComponent } from './views/principal/deletar/deletar-categorias/deletar-categorias.component';
 import { DateAgoPipe } from './pipes/date-ago.pipe';
-import { OrderModule } from 'ngx-order-pipe';
+
+
 
 @NgModule({
   declarations: [
@@ -48,7 +51,7 @@ import { OrderModule } from 'ngx-order-pipe';
     FormsModule,
     HttpClientModule,
     OrderModule
-    
+
   ],
   providers: [{
     provide: LocationStrategy,
