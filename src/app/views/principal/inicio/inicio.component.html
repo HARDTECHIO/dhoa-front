@@ -1,5 +1,5 @@
 <app-menu-principal></app-menu-principal>
-<div class="container-fluid">
+<div class="container-fluid " id="container-inicio-cima">
     <div class="row align-items-center">
         <div class="col-md">
             <div class="row justify-content-center">
@@ -10,8 +10,8 @@
             </div>
             <div class="row justify-content-center">
                 <div class="col-md-8 d-flex justify-content-center">
-                    <a data-toggle="modal" data-target="#pedirAjuda" class="btn-transparente btn-grande mr-3 px-5">Pedir Ajuda</a>
-                    <a data-toggle="modal" data-target="#oferecerAjuda" class="btn-verde btn-grande px-5">Oferecer
+                    <a data-toggle="modal" data-target="#pedirAjuda" class="btn-transparente btn-grande mr-3 px-5" id="texto-colors">Pedir Ajuda</a>
+                    <a data-toggle="modal" data-target="#oferecerAjuda" class="btn-verde btn-grande px-5" id="texto">Oferecer
                         Ajuda</a>
                 </div>
             </div>
@@ -21,7 +21,7 @@
     </div>
 </div>
 
-<div class="container">
+<div class="container-fluid " id="container-inicio">
     <div class="row justify-content-center">
         <div class="col-md-3 mr-3">
             <!-- filtros -->
@@ -29,12 +29,12 @@
                 <div class="col-md p-4">
                     <div class="row">
                         <div class="col-md">
-                            <h5>Filtros</h5>
+                            <h5 id="texto-colors" >Filtros</h5>
                         </div>
                     </div>
                     <div class="row mb-3">
                         <!-- tipo postagem -->
-                        <div class="col-md">
+                        <div class="col-md" id="texto-colors" >
                             <a (click)='filtrarPostagens()' id="todasPostagens" class="btn-transparente btn-grande d-block my-2">Ver todas as publicações</a>
                             <p class="m-0">Tipo de Publicação</p>
                             <a (click)="filtrarTipo('pedindo')" id="pedindo" class="btn-transparente btn-grande d-block my-2">Pedindo ajuda</a>
@@ -44,7 +44,7 @@
 
                     <!-- temas/categorias -->
                     <div class="row">
-                        <div class="col-md">
+                        <div class="col-md" id="texto-colors">
                             <p class="m-0">Categorias</p>
                             <div *ngFor="let categoria of categorias">
                                 <a (click)='filtrarCategoria(categoria.id, categoria.nome)' id="{{categoria.nome}}" class="btn-transparente btn-grande d-block my-2 btn-filtro">{{categoria.nome}}</a>
@@ -58,8 +58,8 @@
         <!-- /filtros -->
 
         <!-- itens do feed -->
-        <div class="col-md-6">
-            <div *ngFor="let postagem of postagens | orderBy : key : reverse" class="row p-2 mb-3 item-feed">
+        <div class="col-md-6 " id="texto-colors" >
+            <div  *ngFor='let postagem of postagens | orderBy : key : reverse' class="bg-light row p-2 mb-3 item-feed color-feed">
                 <!-- item do feed -->
                 <div class="col-md py-2">
                     <div class="row mb-3">
@@ -98,7 +98,7 @@
 
 <!-- Modal Pedir Ajuda -->
 <div class="modal fade" id="pedirAjuda" tabindex="-1" aria-labelledby="pedirAjudaLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-dialog modal-dialog-centered" id="texto-colors" >
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="pedirAjudaLabel">Fazer nova publicação</h5>
@@ -141,7 +141,7 @@
 
 <!-- Modal Oferecendo Ajuda -->
 <div class="modal fade" id="oferecerAjuda" tabindex="-1" aria-labelledby="oferecerAjudaLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-dialog modal-dialog-centered" id="texto-colors" >
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="oferecerAjudaLabel">Fazer nova publicação</h5>
