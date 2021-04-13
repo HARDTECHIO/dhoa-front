@@ -3,7 +3,7 @@ import { AuthService } from './../../service/auth.service';
 import { UsuarioLogin } from './../../models/UsuarioLogin';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import Swal from 'sweetalert2'
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-entrar',

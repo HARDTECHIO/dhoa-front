@@ -234,4 +234,12 @@ export class InicioComponent implements OnInit {
     }
     return res
   }
+
+  verContato(nome: string, contato: string) {
+    Swal.fire(
+      'Obrigado por ajudar o próximo',
+      'Você pode entrar em contato com ' + nome + ' através do email: ' + contato,
+      'info'
+    )
+  }
 }

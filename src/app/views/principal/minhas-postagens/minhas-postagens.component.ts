@@ -7,6 +7,7 @@ import { AuthService } from 'src/app/service/auth.service';
 import { CategoriaService } from 'src/app/service/categoria.service';
 import { PostagemService } from 'src/app/service/postagem.service';
 import { environment } from 'src/environments/environment.prod';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-minhas-postagens',
@@ -33,15 +34,13 @@ export class MinhasPostagensComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-
     this.getUsuario()
-    console.log(environment.token)
   }
 
 
   getUsuario(){
     this.authService.findById(this.idUsuario).subscribe((resp: Usuario)=>{
-      this.usuario =resp
+      this.usuario = resp
     })
   }
 
@@ -57,6 +56,49 @@ export class MinhasPostagensComponent implements OnInit {
     })
   }
   
+  apagarMinhaPostagem(id: number) {
+
+    const swalWithBootstrapButtons = Swal.mixin({
+      customClass: {
+        confirmButton: 'btn btn-success btn-lg',
+        cancelButton: 'btn btn-danger btn-lg mr-3'
+      },
+      buttonsStyling: false
+    })
+    
+    swalWithBootstrapButtons.fire({
+      title: 'Você tem certeza?',
+      text: "Sua postagem apagada não poderá ser recuperada",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonText: 'Apagar',
+      cancelButtonText: 'Melhor não',
+      reverseButtons: true
+    }).then((result) => {
+      if (result.isConfirmed) {
+        swalWithBootstrapButtons.fire(
+          'Sucesso',
+          'Sua postagem foi apagada',
+          'success'
+        )
+        this.postagemService.delete(id).subscribe(()=>{
+          this.router.navigate(['/minhas-postagens'])
+          this.getUsuario()
+        })
+      } else if (
+        /* Read more about handling dismissals below */
+        result.dismiss === Swal.DismissReason.cancel
+      ) {
+        swalWithBootstrapButtons.fire(
+          'Cancelado',
+          'Foi por pouco, não? :)',
+          'error'
+        )
+      }
+    })
+
+    
+  }
 
 }
 

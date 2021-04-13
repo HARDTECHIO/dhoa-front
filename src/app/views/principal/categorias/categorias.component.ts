@@ -89,6 +89,7 @@ export class CategoriasComponent implements OnInit {
       showCancelButton: true,
       confirmButtonText: `Apagar`,
       cancelButtonText: `Cancelar`,
+      reverseButtons: true
     }).then((result) => {
       /* Read more about isConfirmed, isDenied below */
       if (result.isConfirmed) {
