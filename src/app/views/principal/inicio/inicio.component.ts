@@ -28,10 +28,8 @@ export class InicioComponent implements OnInit {
 
   tipos = 'pedindo oferecendo'
 
-  key = 'dataPostagem'
+  key="dataPostagem"
   reverse = true
-
-
 
   constructor(
     private router: Router,
@@ -121,7 +119,7 @@ export class InicioComponent implements OnInit {
       let cat = document.querySelector('#' + nome)
       cat?.classList.remove('btn-verde-ativo')
     })
-    
+
     let tipos = this.tipos.split(' ')
     for (let i = 0; i < tipos.length; i++) {
       let tipo = document.querySelector('#' + tipos[i])
@@ -132,7 +130,7 @@ export class InicioComponent implements OnInit {
     all?.classList.remove('btn-verde-ativo')
   }
 
-  verificaImagem(imagem: string) {  
+  verificaImagem(imagem: string) {
     let res = false
     if(imagem != null) {
       res = true

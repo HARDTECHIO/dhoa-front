@@ -60,8 +60,10 @@
         <!-- itens do feed -->
         <div class="col-md-6 " id="texto-colors" >
             <div  *ngFor='let postagem of postagens | orderBy : key : reverse' class="bg-light row p-2 mb-3 item-feed color-feed">
+        <div class="col-md-6">
+            <div *ngFor="let postagem of postagens | orderBy : key : reverse" class="row p-2 mb-3 item-feed">
                 <!-- item do feed -->
-                <div class="col-md">
+                <div class="col-md py-2">
                     <div class="row mb-3">
                         <!-- foto usuario e título -->
                         <div class="col-md d-flex align-items-center">
@@ -70,6 +72,7 @@
                             <p class="px-2 m-0 text-secondary"><span style="color: #212121;">{{postagem.usuario.nome}}</span> - Está <span class="cap">{{postagem.tipoPostagem}}</span> Ajuda <br> {{postagem.dataPostagem | dateAgo}} <i class="far fa-clock"></i>
                         </div>
                     </div><!-- /foto usuario e título -->
+                    <hr style="height:0.5px;border-width:0;color:gray;background-color:rgb(236, 225, 225)">
                     <div class="row">
                         <!-- texto -->
                         <div class="col-md">
@@ -82,9 +85,10 @@
                             <img src="{{postagem.imagemUrl}}" width="100%">
                         </div>
                     </div><!-- /foto publicação -->
+                    <hr style="height:0.5px;border-width:0;color:gray;background-color:rgb(236, 225, 225)">
                     <div class="row pt-2">
                         <div class="col-md d-flex justify-content-between align-items-center">
-                            <p class="m-0"><span class='cap'>{{postagem.tipoPostagem}} {{postagem.categoria.nome}}</span></p>
+                            <p class="m-0"><span class='cap'>{{postagem.tipoPostagem}} {{postagem.categoria.nome}} <i class="{{postagem.categoria.icone}}"></i></span></p>
                             <a class="btn-verde btn-grande px-5" href="mailto:{{postagem.contatoUrl}}">Entrar em contato</a>
                         </div>
                     </div>
