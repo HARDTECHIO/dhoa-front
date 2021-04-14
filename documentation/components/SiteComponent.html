@@ -1,0 +1,1355 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>doa-front documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">doa-front documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>SiteComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/views/site/site.component.ts</code>
+</p>
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-site</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./site.component.css</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./site.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#mensagem">mensagem</a>
+                            </li>
+                            <li>
+                                <a href="#validacaoAssunto">validacaoAssunto</a>
+                            </li>
+                            <li>
+                                <a href="#validacaoEmail">validacaoEmail</a>
+                            </li>
+                            <li>
+                                <a href="#validacaoMensagem">validacaoMensagem</a>
+                            </li>
+                            <li>
+                                <a href="#validacaoNome">validacaoNome</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#enviar">enviar</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#validaAssunto">validaAssunto</a>
+                            </li>
+                            <li>
+                                <a href="#validaEmail">validaEmail</a>
+                            </li>
+                            <li>
+                                <a href="#validaMensagem">validaMensagem</a>
+                            </li>
+                            <li>
+                                <a href="#validaNome">validaNome</a>
+                            </li>
+                            <li>
+                                <a href="#validar">validar</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(router: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>, authService: <a href="../injectables/AuthService.html">AuthService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/app/views/site/site.component.ts:23</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>router</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/router/Router" target="_blank" >Router</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>authService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/AuthService.html" target="_self" >AuthService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="enviar"></a>
+                    <span class="name">
+                        <b>
+                            enviar
+                        </b>
+                        <a href="#enviar"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>enviar()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="66"
+                            class="link-to-prism">src/app/views/site/site.component.ts:66</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <b>
+                            ngOnInit
+                        </b>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="33"
+                            class="link-to-prism">src/app/views/site/site.component.ts:33</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="validaAssunto"></a>
+                    <span class="name">
+                        <b>
+                            validaAssunto
+                        </b>
+                        <a href="#validaAssunto"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>validaAssunto(event: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="58"
+                            class="link-to-prism">src/app/views/site/site.component.ts:58</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>event</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="validaEmail"></a>
+                    <span class="name">
+                        <b>
+                            validaEmail
+                        </b>
+                        <a href="#validaEmail"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>validaEmail(event: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="54"
+                            class="link-to-prism">src/app/views/site/site.component.ts:54</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>event</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="validaMensagem"></a>
+                    <span class="name">
+                        <b>
+                            validaMensagem
+                        </b>
+                        <a href="#validaMensagem"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>validaMensagem(event: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="62"
+                            class="link-to-prism">src/app/views/site/site.component.ts:62</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>event</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="validaNome"></a>
+                    <span class="name">
+                        <b>
+                            validaNome
+                        </b>
+                        <a href="#validaNome"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>validaNome(event: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="50"
+                            class="link-to-prism">src/app/views/site/site.component.ts:50</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>event</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="validar"></a>
+                    <span class="name">
+                        <b>
+                            validar
+                        </b>
+                        <a href="#validar"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>validar(condicao: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank">boolean</a>, event: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="37"
+                            class="link-to-prism">src/app/views/site/site.component.ts:37</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>condicao</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>event</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="mensagem"></a>
+                        <span class="name">
+                            <b>
+                            mensagem</b>
+                            <a href="#mensagem"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>{
+    email: &#x27;&#x27;,
+    nome: &#x27;&#x27;,
+    assunto: &#x27;&#x27;
+  }</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/views/site/site.component.ts:14</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="validacaoAssunto"></a>
+                        <span class="name">
+                            <b>
+                            validacaoAssunto</b>
+                            <a href="#validacaoAssunto"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>false</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/app/views/site/site.component.ts:22</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="validacaoEmail"></a>
+                        <span class="name">
+                            <b>
+                            validacaoEmail</b>
+                            <a href="#validacaoEmail"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>false</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/app/views/site/site.component.ts:20</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="validacaoMensagem"></a>
+                        <span class="name">
+                            <b>
+                            validacaoMensagem</b>
+                            <a href="#validacaoMensagem"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>false</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/app/views/site/site.component.ts:23</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="validacaoNome"></a>
+                        <span class="name">
+                            <b>
+                            validacaoNome</b>
+                            <a href="#validacaoNome"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>false</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="21" class="link-to-prism">src/app/views/site/site.component.ts:21</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { AuthService } from &#x27;src/app/service/auth.service&#x27;;
+import { element } from &#x27;protractor&#x27;;
+import { Component, OnInit } from &#x27;@angular/core&#x27;;
+import Swal from &#x27;sweetalert2&#x27;;
+import { Router } from &#x27;@angular/router&#x27;;
+
+@Component({
+  selector: &#x27;app-site&#x27;,
+  templateUrl: &#x27;./site.component.html&#x27;,
+  styleUrls: [&#x27;./site.component.css&#x27;]
+})
+export class SiteComponent implements OnInit {
+
+  mensagem &#x3D; {
+    email: &#x27;&#x27;,
+    nome: &#x27;&#x27;,
+    assunto: &#x27;&#x27;
+  }
+
+  validacaoEmail &#x3D; false
+  validacaoNome &#x3D; false
+  validacaoAssunto &#x3D; false
+  validacaoMensagem &#x3D; false
+
+
+
+
+  constructor(
+    private router: Router,
+    private authService: AuthService
+  ) { }
+
+  ngOnInit() {
+    window.scroll(0, 0)
+  }
+
+  validar(condicao: boolean, event: any) {
+    let valido &#x3D; false
+    if (condicao) {
+      event.target.classList.remove(&quot;is-valid&quot;)
+      event.target.classList.add(&quot;is-invalid&quot;)
+    } else {
+      event.target.classList.remove(&quot;is-invalid&quot;)
+      event.target.classList.add(&quot;is-valid&quot;)
+      valido &#x3D; true
+    }
+    return valido
+  }
+
+  validaNome(event: any) {
+    this.validacaoNome &#x3D; this.validar(event.target.value.length &lt; 3 || event.target.value.length &gt; 255, event)
+  }
+
+  validaEmail(event: any){
+    this.validacaoEmail &#x3D; this.validar(event.target.value.indexOf(&#x27;@&#x27;) &#x3D;&#x3D; -1 || event.target.value.indexOf(&#x27;.&#x27;) &#x3D;&#x3D; -1, event)
+  }
+
+  validaAssunto(event: any){
+    this.validacaoAssunto &#x3D; this.validar(event.target.value !&#x3D; &quot;A&quot;, event)
+  }
+
+  validaMensagem(event: any){
+    this.validacaoMensagem &#x3D; this.validar(event.target.value.length &lt; 11 || event.target.value.length &gt; 255, event)
+  }
+
+  enviar(){
+
+    Swal.fire({
+      icon: &#x27;success&#x27;,
+      title: &#x27;Obrigado!&#x27;,
+      text: &#x27;Recebemos sua sugestão ou reclamação com sucesso.&#x27;,
+      showConfirmButton: false,
+      timer: 3500
+    })
+    this.router.navigate([&#x27;/cadastrar&#x27;])
+    setTimeout(()&#x3D;&gt;{
+      this.router.navigate([&#x27;/site&#x27;])
+    },500)
+  }
+
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;app-menu&gt;&lt;/app-menu&gt;
+&lt;!--Caroussel--&gt;
+&lt;div id&#x3D;&quot;carouselExampleCaptions&quot; class&#x3D;&quot;carousel slide&quot; data-ride&#x3D;&quot;carousel&quot;&gt;
+    &lt;ol class&#x3D;&quot;carousel-indicators&quot;&gt;
+        &lt;li data-target&#x3D;&quot;#carouselExampleCaptions&quot; data-slide-to&#x3D;&quot;0&quot; class&#x3D;&quot;active&quot;&gt;&lt;/li&gt;
+        &lt;li data-target&#x3D;&quot;#carouselExampleCaptions&quot; data-slide-to&#x3D;&quot;1&quot;&gt;&lt;/li&gt;
+        &lt;li data-target&#x3D;&quot;#carouselExampleCaptions&quot; data-slide-to&#x3D;&quot;2&quot;&gt;&lt;/li&gt;
+    &lt;/ol&gt;
+    &lt;div class&#x3D;&quot;carousel-inner&quot;&gt;
+        &lt;div class&#x3D;&quot;carousel-item active&quot;&gt;
+            &lt;img src&#x3D;&quot;../../../assets/img/Fome2.png&quot; class&#x3D;&quot;d-block w-100&quot; alt&#x3D;&quot;...&quot;&gt;
+            &lt;div class&#x3D;&quot;carousel-caption d-none d-md-block&quot;&gt;
+                &lt;h5&gt;A FOME NÃO PODE ESPERAR&lt;/h5&gt;
+                &lt;p&gt;Como sua ajuda, ajude que tem fome.&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;carousel-item&quot;&gt;
+            &lt;img src&#x3D;&quot;../../../assets/img/slide2.png&quot; class&#x3D;&quot;d-block w-100&quot; alt&#x3D;&quot;...&quot;&gt;
+            &lt;div class&#x3D;&quot;carousel-caption d-none d-md-block&quot;&gt;
+                &lt;h5 &gt;Tenha o hábito de ajudar&lt;/h5&gt;
+                &lt;p &gt;Ame o próximo na mesma proporção que a você mesmo, e convenhamos niguém gosta de passar fome.&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;carousel-item&quot;&gt;
+            &lt;img src&#x3D;&quot;../../../assets/img/Fome1.png&quot; class&#x3D;&quot;d-block w-100&quot; alt&#x3D;&quot;...&quot;&gt;
+            &lt;div class&#x3D;&quot;carousel-caption d-none d-md-block&quot;&gt;
+                &lt;h5&gt;FOME ?&lt;/h5&gt;
+                &lt;p &gt;Quando o prato é muito disputado, podemos aprender a dividir.&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;a class&#x3D;&quot;carousel-control-prev&quot; href&#x3D;&quot;#carouselExampleCaptions&quot; role&#x3D;&quot;button&quot; data-slide&#x3D;&quot;prev&quot;&gt;
+        &lt;span class&#x3D;&quot;carousel-control-prev-icon&quot; aria-hidden&#x3D;&quot;true&quot;&gt;&lt;/span&gt;
+        &lt;span class&#x3D;&quot;sr-only&quot;&gt;Previous&lt;/span&gt;
+    &lt;/a&gt;
+    &lt;a class&#x3D;&quot;carousel-control-next&quot; href&#x3D;&quot;#carouselExampleCaptions&quot; role&#x3D;&quot;button&quot; data-slide&#x3D;&quot;next&quot;&gt;
+        &lt;span class&#x3D;&quot;carousel-control-next-icon&quot; aria-hidden&#x3D;&quot;true&quot;&gt;&lt;/span&gt;
+        &lt;span class&#x3D;&quot;sr-only&quot;&gt;Next&lt;/span&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+&lt;!--/Caroussel--&gt;
+
+&lt;!--Sobre nos--&gt;
+&lt;section class&#x3D;&quot;container py-5&quot; id&#x3D;&quot;sobre&quot;&gt;
+    &lt;div class&#x3D;&quot;row&quot;&gt;
+        &lt;div class&#x3D;&quot;col-md&quot;&gt;
+            &lt;h1 class&#x3D;&quot;text-center mb-5 titulo&quot;&gt;Sobre nos&lt;/h1&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;row&quot;&gt;
+        &lt;div class&#x3D;&quot;col-md&quot;&gt;
+            &lt;h5 class&#x3D;&quot;subtitulo&quot;&gt;Empresa&lt;/h5&gt;
+            &lt;p class&#x3D;&quot;texto&quot;&gt;Criada em 2021 pelo grupo Hard Tech, a DHOA atua no setor de redes sociais,
+                onde pessoas com carências de insumos básicos, podem se conectar com
+                pessoas que podem e estão dispostas a ajuda-las.&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;row align-items-center&quot;&gt;
+        &lt;div class&#x3D;&quot;col-md&quot;&gt;
+
+            &lt;!-- &lt;h5 class&#x3D;&quot;subtitulo&quot;&gt;Empresa&lt;/h5&gt;
+            &lt;p class&#x3D;&quot;texto&quot;&gt;Criada em 2021 pelo grupo Hard Tech, a DHOA atua no setor de redes sociais,
+                onde pessoas com carências de insumos básicos, podem se conectar com
+                pessoas que podem e estão dispostas a ajuda-las.&lt;/p&gt; --&gt;
+
+            &lt;h5 class&#x3D;&quot;subtitulo&quot;&gt;D.H.O.A&lt;/h5&gt;
+            &lt;p class&#x3D;&quot;texto&quot;&gt;A rede D.H.O.A, vem também com uma causa, O ato de ajudar  que pode ser recebido e transpassado de inúmeras formas,  como na contribuição no  combate a fome com mecanismos de busca específicos para estes tópicos, ou por exemplo uma aula com o intuito de profissionalizar e gerar renda posteriormente.&lt;/p&gt;
+
+            &lt;p class&#x3D;&quot;texto&quot;&gt;Queremos que a ajuda chegue em todo momento a todo lugar, onde, para alguns possam ser uma “simples doação” sendo que pessoas necessitem dessa simplicidade. Formar um espaço seguro e rápido para que qualquer pessoa seja atendida de forma justa, sendo uma proposta de emprego, um auxílio com alimentos, ,ONGs e empresas tenham a mesma facilidade de ajudar e encontrar essas incógnitas. Estamos aqui para conectar pessoas, histórias  e vida, somos da D.H.O.A estamos aqui para ajuda.&lt;/p&gt;
+
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;col-md&quot;&gt;
+            &lt;img src&#x3D;&quot;../../../assets/img/collaboration.png&quot; width&#x3D;&quot;500px&quot;&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/section&gt;
+&lt;!--/Sobre nos--&gt;
+
+&lt;!--Equipe --&gt;
+&lt;section class&#x3D;&quot;container-site-cima&quot; id&#x3D;&quot;equipe&quot;&gt;
+    &lt;div class&#x3D;&quot;container pt-5&quot; id&#x3D;&quot;container-site-cima&quot;&gt;
+        &lt;div class&#x3D;&quot;row&quot;&gt;
+            &lt;div class&#x3D;&quot;col-md&quot;&gt;
+                &lt;h1 class&#x3D;&quot;text-center titulo&quot;&gt;Nossa Equipe&lt;/h1&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class&#x3D;&quot;row&quot;&gt;
+            &lt;div class&#x3D;&quot;col-md-4 p-5&quot;&gt;
+                &lt;div class&#x3D;&quot;foto text-center&quot;&gt;
+                    &lt;img src&#x3D;&quot;../../../assets/img/ninjas/denilsonSouza.png&quot; alt&#x3D;&quot;&quot;
+                        class&#x3D;&quot;rounded-circle equipe-foto img-fluid&quot;&gt;
+                &lt;/div&gt;
+                &lt;p class&#x3D;&quot;equipe-nome&quot;&gt;Denilson Souza&lt;/p&gt;
+                &lt;p class&#x3D;&quot;equipe-cargo&quot;&gt;Desenvolvedor full stack&lt;/p&gt;
+
+                &lt;div class&#x3D;&quot;equipe-social d-flex justify-content-center&quot;&gt;
+                    &lt;a href&#x3D;&quot;https://github.com/DhenSouza&quot; target&#x3D;&quot;_blank&quot;&gt;&lt;i class&#x3D;&quot;fab fa-github-alt&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+                    &lt;a href&#x3D;&quot;https://www.linkedin.com/in/denilson-souza/&quot; target&#x3D;&quot;_blank&quot;&gt;&lt;i
+                            class&#x3D;&quot;fab fa-linkedin-in&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;col-md-4 p-5&quot;&gt;
+                &lt;div class&#x3D;&quot;foto text-center&quot;&gt;
+                    &lt;img src&#x3D;&quot;../../../assets/img/ninjas/euJeanFundo.png&quot; alt&#x3D;&quot;&quot;
+                        class&#x3D;&quot;rounded-circle equipe-foto img-fluid&quot;&gt;
+                &lt;/div&gt;
+                &lt;p class&#x3D;&quot;equipe-nome&quot;&gt;Jean Cesario&lt;/p&gt;
+                &lt;p class&#x3D;&quot;equipe-cargo&quot;&gt;Desenvolvedor full stack&lt;/p&gt;
+
+                &lt;div class&#x3D;&quot;equipe-social d-flex justify-content-center&quot;&gt;
+                    &lt;a href&#x3D;&quot;https://github.com/jecesario&quot; target&#x3D;&quot;_blank&quot;&gt;&lt;i class&#x3D;&quot;fab fa-github-alt&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+                    &lt;a href&#x3D;&quot;https://www.linkedin.com/in/jecesario/ &quot; target&#x3D;&quot;_blank&quot;&gt;&lt;i
+                            class&#x3D;&quot;fab fa-linkedin-in&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;col-md-4 p-5&quot;&gt;
+                &lt;div class&#x3D;&quot;foto text-center&quot;&gt;
+                    &lt;img src&#x3D;&quot;../../../assets/img/ninjas/kewin.png&quot; alt&#x3D;&quot;&quot;
+                        class&#x3D;&quot;rounded-circle equipe-foto img-fluid&quot;&gt;
+                &lt;/div&gt;
+                &lt;p class&#x3D;&quot;equipe-nome&quot;&gt;Kewin Souto&lt;/p&gt;
+                &lt;p class&#x3D;&quot;equipe-cargo&quot;&gt;Desenvolvedor full stack&lt;/p&gt;
+
+                &lt;div class&#x3D;&quot;equipe-social d-flex justify-content-center&quot;&gt;
+                    &lt;a href&#x3D;&quot;https://github.com/Kewin-Souto &quot; target&#x3D;&quot;_blank&quot;&gt;&lt;i class&#x3D;&quot;fab fa-github-alt&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+                    &lt;a href&#x3D;&quot;https://www.linkedin.com/in/kewin-souto-barros-6a8851207/&quot; target&#x3D;&quot;_blank&quot;&gt;&lt;i
+                            class&#x3D;&quot;fab fa-linkedin-in&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;col-md-4 p-5&quot;&gt;
+                &lt;div class&#x3D;&quot;foto text-center&quot;&gt;
+                    &lt;img src&#x3D;&quot;../../../assets/img/ninjas/lucas.png&quot; alt&#x3D;&quot;&quot;
+                        class&#x3D;&quot;rounded-circle equipe-foto img-fluid&quot;&gt;
+                &lt;/div&gt;
+                &lt;p class&#x3D;&quot;equipe-nome&quot;&gt;Lucas Schimit&lt;/p&gt;
+                &lt;p class&#x3D;&quot;equipe-cargo&quot;&gt;Desenvolvedor full stack&lt;/p&gt;
+                &lt;div class&#x3D;&quot;equipe-social d-flex justify-content-center&quot;&gt;
+                    &lt;a href&#x3D;&quot;https://github.com/Lucas-schimit&quot; target&#x3D;&quot;_blank&quot;&gt;&lt;i class&#x3D;&quot;fab fa-github-alt&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+                    &lt;a href&#x3D;&quot;https://www.linkedin.com/in/lucas-alves-schimit-611509142/&quot; target&#x3D;&quot;_blank&quot;&gt;&lt;i
+                            class&#x3D;&quot;fab fa-linkedin-in&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;col-md-4 p-5&quot;&gt;
+                &lt;div class&#x3D;&quot;foto text-center&quot;&gt;
+                    &lt;img src&#x3D;&quot;../../../assets/img/ninjas/matheus.png&quot; alt&#x3D;&quot;&quot;
+                        class&#x3D;&quot;rounded-circle equipe-foto img-fluid&quot;&gt;
+                &lt;/div&gt;
+                &lt;p class&#x3D;&quot;equipe-nome&quot;&gt;Matheus Ribeiro&lt;/p&gt;
+                &lt;p class&#x3D;&quot;equipe-cargo&quot;&gt;Desenvolvedor full stack&lt;/p&gt;
+                &lt;div class&#x3D;&quot;equipe-social d-flex justify-content-center&quot;&gt;
+                    &lt;a href&#x3D;&quot;https://github.com/Matheus0821&quot; target&#x3D;&quot;_blank&quot;&gt;&lt;i class&#x3D;&quot;fab fa-github-alt&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+                    &lt;a href&#x3D;&quot;https://www.linkedin.com/in/matheus-ribeiro-0759061b5/&quot; target&#x3D;&quot;_blank&quot;&gt;&lt;i
+                            class&#x3D;&quot;fab fa-linkedin-in&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;col-md-4 p-5&quot;&gt;
+                &lt;div class&#x3D;&quot;foto text-center&quot;&gt;
+                    &lt;img src&#x3D;&quot;../../../assets/img/ninjas/milton.png&quot; alt&#x3D;&quot;&quot;
+                        class&#x3D;&quot;rounded-circle equipe-foto img-fluid&quot;&gt;
+                &lt;/div&gt;
+                &lt;p class&#x3D;&quot;equipe-nome&quot;&gt;Milton Junior&lt;/p&gt;
+                &lt;p class&#x3D;&quot;equipe-cargo&quot;&gt;Desenvolvedor full stack&lt;/p&gt;
+                &lt;div class&#x3D;&quot;equipe-social d-flex justify-content-center&quot;&gt;
+                    &lt;a href&#x3D;&quot;https://github.com/Milton-668&quot; target&#x3D;&quot;_blank&quot;&gt;&lt;i class&#x3D;&quot;fab fa-github-alt&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+                    &lt;a href&#x3D;&quot;https://www.linkedin.com/in/mj77/&quot; target&#x3D;&quot;_blank&quot;&gt;&lt;i class&#x3D;&quot;fab fa-linkedin-in&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/section&gt;
+&lt;!--/Equipe--&gt;
+
+&lt;!--Contato--&gt;
+&lt;section class&#x3D;&quot;container p-5&quot; id&#x3D;&quot;contato container-site&quot;&gt;
+    &lt;div class&#x3D;&quot;row pb-3&quot;&gt;
+        &lt;div class&#x3D;&quot;col-md&quot;&gt;
+            &lt;h1 class&#x3D;&quot;text-center titulo mb-4&quot;&gt;Contato&lt;/h1&gt;
+            &lt;h5 class&#x3D;&quot;font-weight-normal mb-4&quot;&gt;Caso tenha alguma dúvida sobre como funciona a rede social DHOA, tenha alguma sugestão ou reclamação. Preencha o formulário abaixo e ficaremos muito felizes em atendê-lo.&lt;/h5&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;row&quot;&gt;
+        &lt;div class&#x3D;&quot;col-md&quot;&gt;
+            &lt;form class&#x3D;&quot;row&quot;&gt;
+                &lt;div class&#x3D;&quot;col-md&quot;&gt;
+                    &lt;div class&#x3D;&quot;form-group&quot;&gt;
+                        &lt;input type&#x3D;&quot;text&quot; [(ngModel)]&#x3D;&quot;mensagem.nome&quot; (keyup)&#x3D;&#x27;validaNome($event)&#x27; class&#x3D;&quot;form-control&quot; id&#x3D;&quot;nome&quot; placeholder&#x3D;&quot;Digite aqui seu Nome&quot;&gt;
+                    &lt;/div&gt;
+                    &lt;div class&#x3D;&quot;form-group&quot;&gt;
+                        &lt;input type&#x3D;&quot;email&quot; [(ngModel)]&#x3D;&#x27;mensagem.email&#x27; (keyup)&#x3D;&#x27;validaEmail($event)&#x27; class&#x3D;&quot;form-control&quot; id&#x3D;&quot;email&quot; placeholder&#x3D;&quot;Digite aqui seu E-mail&quot;&gt;
+                    &lt;/div&gt;
+                    &lt;div class&#x3D;&quot;form-group&quot;&gt;
+                        &lt;!-- &lt;label for&#x3D;&quot;exampleFormControlSelect1&quot;&gt;Example select&lt;/label&gt; --&gt;
+                        &lt;select (keyup)&#x3D;&#x27;validaAssunto($event)&#x27; class&#x3D;&quot;form-control&quot; id&#x3D;&quot;assunto&quot;&gt;
+                            &lt;option value&#x3D;&quot;A&quot;&gt;Selecione o Assunto&lt;/option&gt;
+                            &lt;option &gt;Ajuda&lt;/option&gt;
+                            &lt;option&gt;Bugs&lt;/option&gt;
+                            &lt;option&gt;Sugestões&lt;/option&gt;
+                            &lt;option&gt;Outros&lt;/option&gt;
+                        &lt;/select&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class&#x3D;&quot;col-md&quot;&gt;
+                    &lt;div class&#x3D;&quot;form-group&quot;&gt;
+                        &lt;textarea (keyup)&#x3D;&#x27;validaMensagem($event)&#x27; class&#x3D;&quot;form-control&quot; id&#x3D;&quot;mensagem&quot; rows&#x3D;&quot;5&quot;
+                            placeholder&#x3D;&quot;Digite sua mensagem&quot;&gt;&lt;/textarea&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class&#x3D;&quot;w-100&quot;&gt;&lt;/div&gt;
+                &lt;div class&#x3D;&quot;col-md d-flex justify-content-end&quot;&gt;
+                    &lt;button type&#x3D;&quot;submit&quot; class&#x3D;&quot;btn-verde btn-grande&quot; (click)&#x3D;&#x27;enviar()&#x27;&gt;Enviar&lt;/button&gt;
+                &lt;/div&gt;
+            &lt;/form&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/section&gt;
+
+&lt;!--/Contato--&gt;
+&lt;app-rodape&gt;&lt;/app-rodape&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./site.component.css</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">@import url(&#x27;https://fonts.googleapis.com/css2?family&#x3D;M+PLUS+Rounded+1c:wght@700&amp;display&#x3D;swap&#x27;);
+
+.equipe-foto {
+  width: 300px;
+}
+
+.equipe-nome {
+  font-size: 30px;
+  font-family: &#x27;M PLUS Rounded 1c&#x27;, sans-serif;
+  font-weight: 500px;
+  text-align: center;
+  margin-bottom: 0px;
+}
+
+.equipe-cargo {
+  font-size: 20px;
+  font-family: &#x27;M PLUS Rounded 1c&#x27;, sans-serif;
+  font-weight: 500px;
+  text-align: center;
+  margin-top: -10px;
+}
+
+.equipe-hobbie {
+  font-size: 16px;
+  font-family: &#x27;M PLUS Rounded 1c&#x27;, sans-serif;
+  font-weight: 500px;
+  text-align: center;
+  margin-bottom: 0px;
+}
+
+.equipe-social a {
+  text-decoration: none;
+  font-size: 30px;
+  color: #212121;
+  padding: 0 5px;
+}
+
+#mensagem {
+  resize: none;
+  padding: 11px;
+}
+
+.titulo {
+  font-size: 60px;
+  font-family: &#x27;M PLUS Rounded 1c&#x27;, sans-serif;
+  color: #272b44;
+}
+
+.subtitulo {
+  font-size: 30px;
+  font-family: &#x27;M PLUS Rounded 1c&#x27;, sans-serif;
+  color: #272b44;
+}
+
+.texto {
+  font-family: &#x27;M PLUS Rounded 1c&#x27;, sans-serif;
+  color: #706c87;
+}
+
+.bg-verde {
+  background-color: #e5f7f2;
+}
+
+.equipe-hobbie p {
+  font-style: italic;
+  font-family: &#x27;M PLUS Rounded 1c&#x27;, sans-serif;
+  color: #069a92;
+}
+
+.equipe-hobbie ul li {
+  list-style: none;
+  padding: 0 10px;
+  font-size: 35px;
+}
+
+.equipe-hobbie ul {
+  margin-top: -25px;
+}
+.bg-cinza {
+  background-color: #f4f4f4;
+}
+.color-texto{
+  color: #069a92;
+}
+
+.container-site-cima {
+  background: rgb(221,221,221);
+  background: linear-gradient(0deg, rgba(221,221,221,221) 0%, rgba(255,255,255,1) 100%);
+}
+.container-site {
+  background: rgb(221,221,221);
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><app-menu></app-menu><!--Caroussel--><div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">    <ol class="carousel-indicators">        <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>        <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>        <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>    </ol>    <div class="carousel-inner">        <div class="carousel-item active">            <img src="../../../assets/img/Fome2.png" class="d-block w-100" alt="...">            <div class="carousel-caption d-none d-md-block">                <h5>A FOME NÃO PODE ESPERAR</h5>                <p>Como sua ajuda, ajude que tem fome.</p>            </div>        </div>        <div class="carousel-item">            <img src="../../../assets/img/slide2.png" class="d-block w-100" alt="...">            <div class="carousel-caption d-none d-md-block">                <h5 >Tenha o hábito de ajudar</h5>                <p >Ame o próximo na mesma proporção que a você mesmo, e convenhamos niguém gosta de passar fome.</p>            </div>        </div>        <div class="carousel-item">            <img src="../../../assets/img/Fome1.png" class="d-block w-100" alt="...">            <div class="carousel-caption d-none d-md-block">                <h5>FOME ?</h5>                <p >Quando o prato é muito disputado, podemos aprender a dividir.</p>            </div>        </div>    </div>    <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">        <span class="carousel-control-prev-icon" aria-hidden="true"></span>        <span class="sr-only">Previous</span>    </a>    <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">        <span class="carousel-control-next-icon" aria-hidden="true"></span>        <span class="sr-only">Next</span>    </a></div><!--/Caroussel--><!--Sobre nos--><section class="container py-5" id="sobre">    <div class="row">        <div class="col-md">            <h1 class="text-center mb-5 titulo">Sobre nos</h1>        </div>    </div>    <div class="row">        <div class="col-md">            <h5 class="subtitulo">Empresa</h5>            <p class="texto">Criada em 2021 pelo grupo Hard Tech, a DHOA atua no setor de redes sociais,                onde pessoas com carências de insumos básicos, podem se conectar com                pessoas que podem e estão dispostas a ajuda-las.</p>        </div>    </div>    <div class="row align-items-center">        <div class="col-md">            <!-- <h5 class="subtitulo">Empresa</h5>            <p class="texto">Criada em 2021 pelo grupo Hard Tech, a DHOA atua no setor de redes sociais,                onde pessoas com carências de insumos básicos, podem se conectar com                pessoas que podem e estão dispostas a ajuda-las.</p> -->            <h5 class="subtitulo">D.H.O.A</h5>            <p class="texto">A rede D.H.O.A, vem também com uma causa, O ato de ajudar  que pode ser recebido e transpassado de inúmeras formas,  como na contribuição no  combate a fome com mecanismos de busca específicos para estes tópicos, ou por exemplo uma aula com o intuito de profissionalizar e gerar renda posteriormente.</p>            <p class="texto">Queremos que a ajuda chegue em todo momento a todo lugar, onde, para alguns possam ser uma “simples doação” sendo que pessoas necessitem dessa simplicidade. Formar um espaço seguro e rápido para que qualquer pessoa seja atendida de forma justa, sendo uma proposta de emprego, um auxílio com alimentos, ,ONGs e empresas tenham a mesma facilidade de ajudar e encontrar essas incógnitas. Estamos aqui para conectar pessoas, histórias  e vida, somos da D.H.O.A estamos aqui para ajuda.</p>        </div>        <div class="col-md">            <img src="../../../assets/img/collaboration.png" width="500px">        </div>    </div></section><!--/Sobre nos--><!--Equipe --><section class="container-site-cima" id="equipe">    <div class="container pt-5" id="container-site-cima">        <div class="row">            <div class="col-md">                <h1 class="text-center titulo">Nossa Equipe</h1>            </div>        </div>        <div class="row">            <div class="col-md-4 p-5">                <div class="foto text-center">                    <img src="../../../assets/img/ninjas/denilsonSouza.png" alt=""                        class="rounded-circle equipe-foto img-fluid">                </div>                <p class="equipe-nome">Denilson Souza</p>                <p class="equipe-cargo">Desenvolvedor full stack</p>                <div class="equipe-social d-flex justify-content-center">                    <a href="https://github.com/DhenSouza" target="_blank"><i class="fab fa-github-alt"></i></a>                    <a href="https://www.linkedin.com/in/denilson-souza/" target="_blank"><i                            class="fab fa-linkedin-in"></i></a>                </div>            </div>            <div class="col-md-4 p-5">                <div class="foto text-center">                    <img src="../../../assets/img/ninjas/euJeanFundo.png" alt=""                        class="rounded-circle equipe-foto img-fluid">                </div>                <p class="equipe-nome">Jean Cesario</p>                <p class="equipe-cargo">Desenvolvedor full stack</p>                <div class="equipe-social d-flex justify-content-center">                    <a href="https://github.com/jecesario" target="_blank"><i class="fab fa-github-alt"></i></a>                    <a href="https://www.linkedin.com/in/jecesario/ " target="_blank"><i                            class="fab fa-linkedin-in"></i></a>                </div>            </div>            <div class="col-md-4 p-5">                <div class="foto text-center">                    <img src="../../../assets/img/ninjas/kewin.png" alt=""                        class="rounded-circle equipe-foto img-fluid">                </div>                <p class="equipe-nome">Kewin Souto</p>                <p class="equipe-cargo">Desenvolvedor full stack</p>                <div class="equipe-social d-flex justify-content-center">                    <a href="https://github.com/Kewin-Souto " target="_blank"><i class="fab fa-github-alt"></i></a>                    <a href="https://www.linkedin.com/in/kewin-souto-barros-6a8851207/" target="_blank"><i                            class="fab fa-linkedin-in"></i></a>                </div>            </div>            <div class="col-md-4 p-5">                <div class="foto text-center">                    <img src="../../../assets/img/ninjas/lucas.png" alt=""                        class="rounded-circle equipe-foto img-fluid">                </div>                <p class="equipe-nome">Lucas Schimit</p>                <p class="equipe-cargo">Desenvolvedor full stack</p>                <div class="equipe-social d-flex justify-content-center">                    <a href="https://github.com/Lucas-schimit" target="_blank"><i class="fab fa-github-alt"></i></a>                    <a href="https://www.linkedin.com/in/lucas-alves-schimit-611509142/" target="_blank"><i                            class="fab fa-linkedin-in"></i></a>                </div>            </div>            <div class="col-md-4 p-5">                <div class="foto text-center">                    <img src="../../../assets/img/ninjas/matheus.png" alt=""                        class="rounded-circle equipe-foto img-fluid">                </div>                <p class="equipe-nome">Matheus Ribeiro</p>                <p class="equipe-cargo">Desenvolvedor full stack</p>                <div class="equipe-social d-flex justify-content-center">                    <a href="https://github.com/Matheus0821" target="_blank"><i class="fab fa-github-alt"></i></a>                    <a href="https://www.linkedin.com/in/matheus-ribeiro-0759061b5/" target="_blank"><i                            class="fab fa-linkedin-in"></i></a>                </div>            </div>            <div class="col-md-4 p-5">                <div class="foto text-center">                    <img src="../../../assets/img/ninjas/milton.png" alt=""                        class="rounded-circle equipe-foto img-fluid">                </div>                <p class="equipe-nome">Milton Junior</p>                <p class="equipe-cargo">Desenvolvedor full stack</p>                <div class="equipe-social d-flex justify-content-center">                    <a href="https://github.com/Milton-668" target="_blank"><i class="fab fa-github-alt"></i></a>                    <a href="https://www.linkedin.com/in/mj77/" target="_blank"><i class="fab fa-linkedin-in"></i></a>                </div>            </div>        </div>    </div></section><!--/Equipe--><!--Contato--><section class="container p-5" id="contato container-site">    <div class="row pb-3">        <div class="col-md">            <h1 class="text-center titulo mb-4">Contato</h1>            <h5 class="font-weight-normal mb-4">Caso tenha alguma dúvida sobre como funciona a rede social DHOA, tenha alguma sugestão ou reclamação. Preencha o formulário abaixo e ficaremos muito felizes em atendê-lo.</h5>        </div>    </div>    <div class="row">        <div class="col-md">            <form class="row">                <div class="col-md">                    <div class="form-group">                        <input type="text" [(ngModel)]="mensagem.nome" (keyup)=\'validaNome($event)\' class="form-control" id="nome" placeholder="Digite aqui seu Nome">                    </div>                    <div class="form-group">                        <input type="email" [(ngModel)]=\'mensagem.email\' (keyup)=\'validaEmail($event)\' class="form-control" id="email" placeholder="Digite aqui seu E-mail">                    </div>                    <div class="form-group">                        <!-- <label for="exampleFormControlSelect1">Example select</label> -->                        <select (keyup)=\'validaAssunto($event)\' class="form-control" id="assunto">                            <option value="A">Selecione o Assunto</option>                            <option >Ajuda</option>                            <option>Bugs</option>                            <option>Sugestões</option>                            <option>Outros</option>                        </select>                    </div>                </div>                <div class="col-md">                    <div class="form-group">                        <textarea (keyup)=\'validaMensagem($event)\' class="form-control" id="mensagem" rows="5"                            placeholder="Digite sua mensagem"></textarea>                    </div>                </div>                <div class="w-100"></div>                <div class="col-md d-flex justify-content-end">                    <button type="submit" class="btn-verde btn-grande" (click)=\'enviar()\'>Enviar</button>                </div>            </form>        </div>    </div></section><!--/Contato--><app-rodape></app-rodape></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CadastrarComponent', 'selector': 'app-cadastrar'},{'name': 'CategoriasComponent', 'selector': 'app-categorias'},{'name': 'DeletarCategoriasComponent', 'selector': 'app-deletar-categorias'},{'name': 'DeletarPostagensComponent', 'selector': 'app-deletar-postagens'},{'name': 'EditarCategoriasComponent', 'selector': 'app-editar-categorias'},{'name': 'EditarPostagensComponent', 'selector': 'app-editar-postagens'},{'name': 'EntrarComponent', 'selector': 'app-entrar'},{'name': 'InicioComponent', 'selector': 'app-inicio'},{'name': 'MenuComponent', 'selector': 'app-menu'},{'name': 'MenuPrincipalComponent', 'selector': 'app-menu-principal'},{'name': 'MinhasPostagensComponent', 'selector': 'app-minhas-postagens'},{'name': 'PerfilComponent', 'selector': 'app-perfil'},{'name': 'RodapeComponent', 'selector': 'app-rodape'},{'name': 'SiteComponent', 'selector': 'app-site'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'SiteComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'SiteComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>
