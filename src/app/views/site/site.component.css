@@ -90,3 +90,15 @@
 .container-site {
   background: rgb(221,221,221);
 }
+
+#titulo-carrousel {
+  font-size: 20px;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  color: #ffffff;
+}
+
+#subtitulo-carrousel{
+  color: #ffffff;
+}
+
+

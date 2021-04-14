@@ -75,7 +75,7 @@
                         <div class="row mb-3">
                             <!-- foto usuario e título -->
                             <div class="col-md d-flex align-items-center">
-                                <img class="rounded-circle" src="{{postagem.usuario.imagemUrl}}"
+                                <img class="rounded-circle " src="{{postagem.usuario.imagemUrl}}"
                                     alt="{{postagem.usuario.nome}}" width="50px" height="50px">
                                 <p class="px-2 m-0 text-secondary"><span
                                         style="color: #212121;">{{postagem.usuario.nome}}</span> - Está <span
@@ -100,7 +100,7 @@
                         <div class="row pt-2">
                             <div class="col-md d-flex justify-content-between align-items-center">
                                 <p class="m-0"><span class='cap'>{{postagem.tipoPostagem}}
-                                        {{postagem.categoria.nome}}</span></p>
+                                        {{postagem.categoria.nome}} <i class="{{postagem.categoria.icone}}"></i></span></p>
                                 <a class="btn-verde btn-grande px-5"
                                     (click)='verContato(postagem.usuario.nome, postagem.contatoUrl)'>Entrar em
                                     contato</a>
