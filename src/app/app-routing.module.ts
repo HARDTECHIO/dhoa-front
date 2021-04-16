@@ -11,6 +11,7 @@ import { InicioComponent } from './views/principal/inicio/inicio.component';
 import { MinhasPostagensComponent } from './views/principal/minhas-postagens/minhas-postagens.component';
 import { PerfilComponent } from './views/principal/perfil/perfil.component';
 import { SiteComponent } from './views/site/site.component';
+import { RedirectComponent } from './handlers/redirect/redirect.component';
 
 const routes: Routes = [
   // Rotas não logado
@@ -20,19 +21,19 @@ const routes: Routes = [
 
   // Rotas do usuário logado
   { path: '', component: InicioComponent },
+  { path: 'feed', component: InicioComponent},
   { path: 'perfil', component: PerfilComponent },
   { path: 'minhas-postagens', component: MinhasPostagensComponent },
   { path: 'postagem/editar/:id', component: EditarPostagensComponent },
   { path: 'postagem/apagar/:id', component: DeletarPostagensComponent },
 
-  //Rotas Usuarios ADM
+  // Rotas Usuarios ADM
   { path: 'categorias', component: CategoriasComponent },
-
-
-
-
   { path: 'categorias/editar/:id', component: EditarCategoriasComponent },
-  { path: 'categorias/apagar/:id', component: DeletarCategoriasComponent }
+  { path: 'categorias/apagar/:id', component: DeletarCategoriasComponent },
+
+  // Rotas manipuladoras
+  { path: 'redirect/:component', component: RedirectComponent}
 ];
 
 @NgModule({

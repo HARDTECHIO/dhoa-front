@@ -93,7 +93,7 @@
                         <div class="row">
                             <!-- foto publicação -->
                             <div class="col-md" *ngIf="verificaImagem(postagem.imagemUrl)">
-                                <img src="{{postagem.imagemUrl}}" width="100%">
+                                <img src="{{postagem.imagemUrl}}" width="500px" height="500px">
                             </div>
                         </div><!-- /foto publicação -->
                         <hr style="height:0.5px;border-width:0;color:gray;background-color:rgb(236, 225, 225)">
@@ -149,7 +149,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn-laranja px-4" data-dismiss="modal">Cancelar</button>
-                <button (click)="publicarP()" type="button" class="btn-verde px-5" data-dismiss="modal">Publicar</button>
+                <button (click)="publicarP()" type="button" class="btn-verde px-5">Publicar</button>
             </div>
         </div>
     </div>
@@ -192,7 +192,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn-laranja px-4" data-dismiss="modal">Cancelar</button>
-                <button (click)="publicarO()" type="button" class="btn-verde px-5" data-dismiss="modal">Publicar</button>
+                <button (click)="publicarO()" type="button" class="btn-verde px-5">Publicar</button>
             </div>
         </div>
     </div>

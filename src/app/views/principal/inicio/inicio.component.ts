@@ -29,7 +29,7 @@ export class InicioComponent implements OnInit {
 
   tipos = 'pedindo oferecendo'
 
-  key="dataPostagem"
+  key = "dataPostagem"
   reverse = true
 
   // Variaveis para validaçõa de nova postagem
@@ -39,7 +39,8 @@ export class InicioComponent implements OnInit {
   constructor(
     private postagemService: PostagemService,
     private authService: AuthService,
-    private categoriaService: CategoriaService
+    private categoriaService: CategoriaService,
+    private router: Router
   ) { }
 
   ngOnInit() {
@@ -104,7 +105,7 @@ export class InicioComponent implements OnInit {
     let tipoPostagem = (document.querySelector('#tipoPostagemP') as HTMLInputElement).value
     this.postagem.tipoPostagem = tipoPostagem
 
-    if(this.textoValido && this.imagemValida) {
+    if (this.textoValido && this.imagemValida) {
       this.postagemService.create(this.postagem).subscribe((resp: Postagem) => {
         this.postagem = resp
         Swal.fire({
@@ -116,7 +117,9 @@ export class InicioComponent implements OnInit {
         })
         this.postagem = new Postagem()
         this.limparValidacoes()
-        this.listarPostagens()
+        document.querySelector('body')?.classList.remove('modal-open')
+        document.querySelector('.modal-backdrop')?.remove()
+        this.router.navigate(['/redirect/feed'])
       })
     } else {
       Swal.fire({
@@ -128,7 +131,7 @@ export class InicioComponent implements OnInit {
       })
     }
 
-    
+
   }
 
   publicarO() {
@@ -143,7 +146,7 @@ export class InicioComponent implements OnInit {
     let tipoPostagem = (document.querySelector('#tipoPostagemO') as HTMLInputElement).value
     this.postagem.tipoPostagem = tipoPostagem
 
-    if(this.textoValido && this.imagemValida) {
+    if (this.textoValido && this.imagemValida) {
       this.postagemService.create(this.postagem).subscribe((resp: Postagem) => {
         this.postagem = resp
         Swal.fire({
@@ -155,7 +158,9 @@ export class InicioComponent implements OnInit {
         })
         this.postagem = new Postagem()
         this.limparValidacoes()
-        this.listarPostagens()
+        document.querySelector('body')?.classList.remove('modal-open')
+        document.querySelector('.modal-backdrop')?.remove()
+        this.router.navigate(['/redirect/feed'])
       })
     } else {
       Swal.fire({
@@ -167,7 +172,7 @@ export class InicioComponent implements OnInit {
       })
     }
 
-    
+
   }
 
   findByIdUser() {
@@ -176,7 +181,7 @@ export class InicioComponent implements OnInit {
     })
   }
 
-  
+
   getCategoria() {
     this.categoriaService.findById(this.idCategoria).subscribe((resp: Categoria) => {
       this.categoria = resp
@@ -229,7 +234,7 @@ export class InicioComponent implements OnInit {
 
   verificaImagem(imagem: string) {
     let res = false
-    if(imagem != null) {
+    if (imagem != null) {
       res = true
     }
     return res

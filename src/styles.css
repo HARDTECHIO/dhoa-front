@@ -87,6 +87,7 @@ h5 {
   background-color: #f36c43;
   color: #fff !important;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .btn-pequeno {

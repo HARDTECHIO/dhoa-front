@@ -15,8 +15,8 @@
                         <div class="row mb-3">
                             <!-- foto usuario e título -->
                             <div class="col-md d-flex align-items-center">
-                                <img class="rounded-circle img-fluid" src="{{postagem.usuario.imagemUrl}}"
-                                    alt="{{postagem.usuario.nome}}" width="50px">
+                                <img class="rounded-circle" src="{{postagem.usuario.imagemUrl}}"
+                                    alt="{{postagem.usuario.nome}}" width="50px" height="50px">
                                 <p class="px-2 m-0">{{postagem.usuario.nome}} - Está <span
                                         class="cap">{{postagem.tipoPostagem}}</span> Ajuda <br> {{postagem.dataPostagem
                                     | dateAgo}} <i class="far fa-clock"></i>
@@ -38,8 +38,8 @@
                         </div><!-- /foto publicação -->
                         <div class="row pt-2">
                             <div class="col-md d-flex justify-content-end align-items-center">
-                                <a class="btn-verde mr-3" (click)='apagarMinhaPostagem(postagem.id)'>Apagar</a>
-                                <a class="btn-verde" [routerLink]="['/postagem/editar/',postagem.id]">Editar </a>
+                                <a class="btn-laranja btn-grande mr-3 px-4" [routerLink]="['/postagem/editar/',postagem.id]">Editar </a>
+                                <a class="btn-verde btn-grande px-4" (click)='apagarMinhaPostagem(postagem.id)'>Apagar</a>
                             </div>
                         </div>
                     </div>

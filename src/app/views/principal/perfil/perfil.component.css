@@ -1,53 +1,6 @@
-.btn-verde {
-  text-decoration: none;
-  border: 2px solid #069a92;
-  padding: .375rem .75rem;
-  border-radius: 50px;
-  width: 130px;
-  height: 40px;
-  text-align: center;
-  line-height: 24px;
-  font-size: 14px;
-  color: #fff !important;
-  background-color: #069a92;
-  transition: 0.3s background-color linear;
-}
-
-.btn-verde:hover {
-  background-color: #03817b;
-  color: #fff !important;
-}
-
-.btn-laranja {
-  text-decoration: none;
-  border: 2px solid #F4805D;
-  padding: .375rem .75rem;
-  border-radius: 50px;
-  text-align: center;
-  color: #fff !important;
-  background-color: #F4805D;
-  transition: 0.3s background-color linear;
-}
-
-.btn-laranja:hover {
-  background-color: #f36c43;
-  color: #fff !important;
-}
-
-.btn-pequeno {
-  width: 130px;
-  height: 30px;
-  line-height: 15px;
-  font-size: 14px;
-}
-
-.btn-grande {
-  width: 130px;
-  height: 40px;
-  line-height: 24px;
-  font-size: 16px;
-}
-
-#texto {
-  font-family: 'M PLUS Rounded 1c', sans-serif;
+.box-s {
+  border-radius: 5px;
+  border: 1px solid #bebebe;
+  -webkit-box-shadow: 0px 3px 5px 0px #bebebe;
+  box-shadow: 0px 3px 5px 0px #bebebe;
 }
