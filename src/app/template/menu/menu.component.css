@@ -14,6 +14,7 @@
 
 .menu-site:hover::after {
   width: 100%;
+  cursor: pointer;
 }
 
 .btn-entrar {
@@ -32,6 +33,7 @@
 .btn-entrar:hover {
   background-color: #069a92;
   color: #fff !important;
+  cursor: pointer;
 }
 
 .btn-cadastrar {
@@ -51,6 +53,7 @@
 .btn-cadastrar:hover {
   background-color: #03817b;
   color: #fff !important;
+  cursor: pointer;
 }
 
 #texto {
