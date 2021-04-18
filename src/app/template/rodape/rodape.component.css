@@ -1,0 +1,14 @@
+.social-rodape {
+    font-size: 40px;
+    margin: 0 8px;
+    color: #069a92;
+}
+
+.social-rodape:hover {
+    color: #03817b;
+}
+
+.hardtech {
+    text-decoration: none;
+    color: #069a92;
+}

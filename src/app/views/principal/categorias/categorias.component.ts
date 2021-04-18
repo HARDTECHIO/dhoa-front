@@ -64,8 +64,7 @@ export class CategoriasComponent implements OnInit {
           text: 'Categoria cadastrada com sucesso!',
           timer: 1500
         })
-        this.listar()
-        this.router.navigate(['/categorias'])
+        this.router.navigate(['/redirect/categorias'])
       })
     } else {
       Swal.fire({
