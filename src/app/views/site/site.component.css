@@ -90,3 +90,11 @@
 .container-site {
   background: rgb(221,221,221);
 }
+
+    #texto-preto {
+      color: #ffffff;
+    }
+
+  .bg-texto {
+     background-color: rgba(10, 10, 10, .6);
+  }
