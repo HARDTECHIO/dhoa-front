@@ -102,3 +102,10 @@
 }
 
 
+    #texto-preto {
+      color: #ffffff;
+    }
+
+  .bg-texto {
+     background-color: rgba(10, 10, 10, .6);
+  }
