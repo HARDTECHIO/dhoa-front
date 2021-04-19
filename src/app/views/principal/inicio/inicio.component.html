@@ -21,17 +21,17 @@
             </div>
         </div>
         <div class="col-md d-flex justify-content-center">
-            <img src="../../../../assets/img/bg-social.png" alt="Pessoas muito loucas" width="100%">
+            <img src="../../../../assets/img/bg-social.png" alt="Pessoas muito loucas" width="100%" class="img-fluid">
         </div>
     </div>
 </div>
 <div id="container-inicio">
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-md-3 mr-3">
+            <div class="col-md-3 mx-2">
                 <!-- filtros -->
                 <div class="row">
-                    <div class="col-md p-4">
+                    <div class="col-md p-4 bg-light item-feed">
                         <div class="row">
                             <div class="col-md">
                                 <h5 id="texto-colors">Filtros</h5>
@@ -67,7 +67,7 @@
             <!-- /filtros -->
 
             <!-- itens do feed -->
-            <div class="col-md-6 " id="texto-colors">
+            <div class="col-md-6 mx-2" id="texto-colors">
                 <div *ngFor='let postagem of postagens | orderBy : key : reverse'
                     class="bg-light row p-2 mb-3 item-feed color-feed">
                     <!-- item do feed -->
@@ -93,7 +93,7 @@
                         <div class="row">
                             <!-- foto publicação -->
                             <div class="col-md" *ngIf="verificaImagem(postagem.imagemUrl)">
-                                <img src="{{postagem.imagemUrl}}" width="100%">
+                                <img src="{{postagem.imagemUrl}}" width="100%" class="img-fluid">
                             </div>
                         </div><!-- /foto publicação -->
                         <hr style="height:0.5px;border-width:0;color:gray;background-color:rgb(236, 225, 225)">
@@ -148,8 +148,8 @@
                 </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn-laranja" data-dismiss="modal">Cancelar</button>
-                <button (click)="publicarP()" type="button" class="btn-verde" data-dismiss="modal">Publicar</button>
+                <button type="button" class="btn-laranja px-4" data-dismiss="modal">Cancelar</button>
+                <button (click)="publicarP()" type="button" class="btn-verde px-5">Publicar</button>
             </div>
         </div>
     </div>
@@ -191,8 +191,8 @@
                 </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn-laranja" data-dismiss="modal">Cancelar</button>
-                <button (click)="publicarO()" type="button" class="btn-verde" data-dismiss="modal">Publicar</button>
+                <button type="button" class="btn-laranja px-4" data-dismiss="modal">Cancelar</button>
+                <button (click)="publicarO()" type="button" class="btn-verde px-5">Publicar</button>
             </div>
         </div>
     </div>

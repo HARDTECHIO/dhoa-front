@@ -9,13 +9,13 @@
                 </div>
             </div>
             <div class="row mt-5">
-                <div class="col-md-4 shadow-sm">
+                <div class="col-md-4 box-s mr-3">
                     <div class="d-flex justify-content-center">
                         <img src="{{usuario.imagemUrl}}" alt="foto perfil" class="img-tamanho mt-5">
                     </div>
                 </div>
-                <div class="col-md-6 d-flex justify-content-center shadow pt-4">
-                    <form>
+                <div class="col-md-6 d-flex justify-content-center pt-4 px-3 box-s">
+                    <form class="w-100">
                         <div class="form-group">
                             <label for="nome">Nome</label>
                             <input [(ngModel)]='usuario.nome' (keyup)='validaNome($event)' name="nome" type="text"
@@ -44,9 +44,9 @@
                         </div>
                         <div class="row mt-2 mb-5">
                             <div class="col-md d-flex justify-content-center">
-                                <button type="submit" class="btn-laranja btn-pequeno mr-3"
+                                <button type="submit" class="btn-laranja  btn-grande mr-3 px-4"
                                     routerLink='/'>Voltar</button>
-                                <button type="submit" class="btn-verde btn-pequeno"
+                                <button type="submit" class="btn-verde btn-grande px-4"
                                     (click)='atualizar()'>Atualizar</button>
                             </div>
                         </div>

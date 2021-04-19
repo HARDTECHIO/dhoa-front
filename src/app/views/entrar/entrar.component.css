@@ -1,31 +1,8 @@
 .bg-entrar {
-    background-image: url(../../../assets/img/bg-entrar.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    width: 100vw;
-    height: 100vh;
+  background-image: url(../../../assets/img/bg-entrar.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+  height: 100vh;
 }
-
-.btn-verde {
-    text-decoration: none;
-    border: 2px solid #069a92;
-  padding: .375rem .75rem;
-  border-radius: 50px;
-  text-align: center;
-  color: #fff !important;
-  background-color: #069a92;
-  transition: 0.3s background-color linear; 
-}
-
-.btn-verde:hover {
-    background-color: #03817b;
-    color: #fff !important;
-  }
-
-  .btn-grande {
-    width: 130px;
-    height: 40px;
-    line-height: 24px;
-    font-size: 14px;
-  }

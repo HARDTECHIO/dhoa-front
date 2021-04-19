@@ -70,7 +70,7 @@
 
         </div>
         <div class="col-md">
-            <img src="../../../assets/img/collaboration.png" width="500px">
+            <img src="../../../assets/img/collaboration.png" class="img-fluid" width="500px">
         </div>
     </div>
 </section>
@@ -92,7 +92,7 @@
                         class="rounded-circle equipe-foto img-fluid">
                 </div>
                 <p class="equipe-nome">Denilson Souza</p>
-                <p class="equipe-cargo">Scrum Master</p>
+                <p class="equipe-cargo">Scrum Master e Dev</p>
 
                 <div class="equipe-social d-flex justify-content-center">
                     <a href="https://github.com/DhenSouza" target="_blank"><i class="fab fa-github-alt"></i></a>
@@ -106,7 +106,7 @@
                         class="rounded-circle equipe-foto img-fluid">
                 </div>
                 <p class="equipe-nome">Jean Cesario</p>
-                <p class="equipe-cargo">Tech Lead</p>
+                <p class="equipe-cargo">Tech Lead e Dev</p>
 
                 <div class="equipe-social d-flex justify-content-center">
                     <a href="https://github.com/jecesario" target="_blank"><i class="fab fa-github-alt"></i></a>
@@ -172,8 +172,8 @@
 <!--/Equipe-->
 
 <!--Contato-->
-<section class="container p-5 " id="contato" >
-    <div class="row pb-3" >
+<section class="container p-5" id="contato">
+    <div class="row pb-3">
         <div class="col-md">
             <h1 class="text-center titulo mb-4">Contato</h1>
             <h5 class="font-weight-normal mb-4">Caso tenha alguma dúvida sobre como funciona a rede social DHOA, tenha alguma sugestão ou reclamação. Preencha o formulário abaixo e ficaremos muito felizes em atendê-lo.</h5>
@@ -184,10 +184,10 @@
             <form class="row">
                 <div class="col-md">
                     <div class="form-group">
-                        <input type="text" [(ngModel)]="mensagem.nome" (keyup)='validaNome($event)' class="form-control" id="nome" placeholder="Digite aqui seu Nome">
+                        <input [(ngModel)]="mensagem.nome" name="nome" type="text" (keyup)='validaNome($event)' class="form-control" id="nome" placeholder="Digite aqui seu Nome">
                     </div>
                     <div class="form-group">
-                        <input type="email" [(ngModel)]='mensagem.email' (keyup)='validaEmail($event)' class="form-control" id="email" placeholder="Digite aqui seu E-mail">
+                        <input [(ngModel)]='mensagem.email' name="email" type="email" (keyup)='validaEmail($event)' class="form-control" id="email" placeholder="Digite aqui seu E-mail">
                     </div>
                     <div class="form-group">
                         <!-- <label for="exampleFormControlSelect1">Example select</label> -->
@@ -202,13 +202,13 @@
                 </div>
                 <div class="col-md">
                     <div class="form-group">
-                        <textarea (keyup)='validaMensagem($event)' class="form-control" id="mensagem" rows="5"
+                        <textarea (keyup)='validaMensagem($event)' name="mensagem" class="form-control" id="mensagem" rows="5"
                             placeholder="Digite sua mensagem"></textarea>
                     </div>
                 </div>
                 <div class="w-100"></div>
                 <div class="col-md d-flex justify-content-end">
-                    <button type="submit" class="btn-verde btn-grande" (click)='enviar()'>Enviar</button>
+                    <button type="submit" class="btn-verde btn-grande px-5" (click)='enviar()'>Enviar</button>
                 </div>
             </form>
         </div>

@@ -23,6 +23,7 @@ import { CategoriasComponent } from './views/principal/categorias/categorias.com
 import { EditarCategoriasComponent } from './views/principal/editar/editar-categorias/editar-categorias.component';
 import { DeletarCategoriasComponent } from './views/principal/deletar/deletar-categorias/deletar-categorias.component';
 import { DateAgoPipe } from './pipes/date-ago.pipe';
+import { RedirectComponent } from './handlers/redirect/redirect.component';
 
 
 
@@ -43,7 +44,8 @@ import { DateAgoPipe } from './pipes/date-ago.pipe';
     CategoriasComponent,
     EditarCategoriasComponent,
     DeletarCategoriasComponent,
-    DateAgoPipe
+    DateAgoPipe,
+    RedirectComponent
   ],
   imports: [
     BrowserModule,

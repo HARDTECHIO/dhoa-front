@@ -21,11 +21,10 @@ export class PerfilComponent implements OnInit {
   emailValido = true
   imagemUrlValida = true
   senhaValida = true
-  confirmaSenha = true
+  confirmaSenha = false
 
   constructor(
     private authService: AuthService,
-    private route: ActivatedRoute,
     private router: Router
   ) { }
 
@@ -82,7 +81,7 @@ export class PerfilComponent implements OnInit {
           icon: 'success',
           title: 'Muito bom',
           text: 'Usuário atualizado com sucesso! Entre novamente!',
-          timer: 1500
+          timer: 2000
         })
         this.clearEnv()
         this.router.navigate(['/entrar'])
@@ -106,6 +105,7 @@ export class PerfilComponent implements OnInit {
   getUsuario(id: number) {
     this.authService.findById(id).subscribe((resp: Usuario) => {
       this.usuario = resp
+      this.usuario.senha = ''
     })
   }
 

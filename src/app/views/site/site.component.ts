@@ -64,18 +64,24 @@ export class SiteComponent implements OnInit {
   }
 
   enviar(){
-
-    Swal.fire({
-      icon: 'success',
-      title: 'Obrigado!',
-      text: 'Recebemos sua sugestão ou reclamação com sucesso.',
-      showConfirmButton: false,
-      timer: 3500
-    })
-    this.router.navigate(['/cadastrar'])
-    setTimeout(()=>{
-      this.router.navigate(['/site'])
-    },500)
+    if(this.validacaoNome) {
+      Swal.fire({
+        icon: 'success',
+        title: 'Obrigado!',
+        text: 'Recebemos sua sugestão ou reclamação com sucesso.',
+        showConfirmButton: false,
+        timer: 2000
+      })
+      this.router.navigate(['/redirect/site'])
+    } else {
+      Swal.fire({
+        icon: 'error',
+        title: 'Ocorreu um erro',
+        text: 'Preencha os campos corretamente',
+        showConfirmButton: false,
+        timer: 2000
+      })
+    }    
   }
 
 }

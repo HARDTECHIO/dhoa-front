@@ -25,7 +25,6 @@ export class CategoriasComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-
     this.listar()
   }
 
@@ -55,7 +54,7 @@ export class CategoriasComponent implements OnInit {
   }
 
   cadastrar() {
-    if(this.categoriaValida && this.descricaoValida && this.iconeValido) {
+    if (this.categoriaValida && this.descricaoValida && this.iconeValido) {
       this.categoriaService.create(this.categoria).subscribe((resp: Categoria) => {
         this.categoria = resp
         this.categoria = new Categoria()
@@ -65,7 +64,7 @@ export class CategoriasComponent implements OnInit {
           text: 'Categoria cadastrada com sucesso!',
           timer: 1500
         })
-        this.listar()
+        this.router.navigate(['/redirect/categorias'])
       })
     } else {
       Swal.fire({
@@ -83,22 +82,42 @@ export class CategoriasComponent implements OnInit {
   }
 
   apagar(id: number, nome: string) {
-    Swal.fire({
-      title: 'Deseja apagar a Categoria: ' + nome,
+
+    const swalWithBootstrapButtons = Swal.mixin({
+      customClass: {
+        confirmButton: 'btn btn-success btn-lg',
+        cancelButton: 'btn btn-danger btn-lg mr-3'
+      },
+      buttonsStyling: false
+    })
+
+    swalWithBootstrapButtons.fire({
+      title: 'Você tem certeza?',
+      text: "Após apagada, essa categoria não poderá ser recuperada",
+      icon: 'warning',
       showCancelButton: true,
-      confirmButtonText: `Apagar`,
-      cancelButtonText: `Cancelar`,
+      confirmButtonText: 'Apagar',
+      cancelButtonText: 'Melhor não',
       reverseButtons: true
     }).then((result) => {
-      /* Read more about isConfirmed, isDenied below */
       if (result.isConfirmed) {
+        swalWithBootstrapButtons.fire(
+          'Sucesso',
+          'A categoria ' + nome + ' foi apagada',
+          'success'
+        )
         this.categoriaService.delete(id).subscribe(() => {
-          Swal.fire('Categoria apagada!', '', 'success')
           this.listar()
-          this.router.navigate(['/categorias'])
         })
-      } else if (result.isDenied) {
-        Swal.fire('Categoria não apagada', '', 'info')
+      } else if (
+        /* Read more about handling dismissals below */
+        result.dismiss === Swal.DismissReason.cancel
+      ) {
+        swalWithBootstrapButtons.fire(
+          'Cancelado',
+          'Foi por pouco, não? :)',
+          'error'
+        )
       }
     })
   }

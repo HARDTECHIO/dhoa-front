@@ -38,8 +38,8 @@
                         </div><!-- /foto publicação -->
                         <div class="row pt-2">
                             <div class="col-md d-flex justify-content-end align-items-center">
-                                <a class="btn-verde mr-3" (click)='apagarMinhaPostagem(postagem.id)'>Apagar</a>
-                                <a class="btn-verde" [routerLink]="['/postagem/editar/',postagem.id]">Editar </a>
+                                <a class="btn-laranja btn-grande mr-3 px-4" [routerLink]="['/postagem/editar/',postagem.id]">Editar </a>
+                                <a class="btn-verde btn-grande px-4" (click)='apagarMinhaPostagem(postagem.id)'>Apagar</a>
                             </div>
                         </div>
                     </div>
